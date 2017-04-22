@@ -10,7 +10,7 @@ public class Hex : MonoBehaviour {
 	public float heightOffset = 1f;
 
 	[System.NonSerialized]
-	public GameObject occupant;
+	public BattleCharacter occupant;
 	[System.NonSerialized]
 	public float height;
 	public Vector3 occupantPosition { get { return new Vector3(transform.position.x, height, transform.position.z); } }

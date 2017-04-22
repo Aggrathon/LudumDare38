@@ -46,7 +46,7 @@ public class MapGenerator : MonoBehaviour {
 	{
 		int x_sqr = (int)(h1.transform.position.z * h1.transform.position.z - h2.transform.position.z * h2.transform.position.z);
 		int y_sqr = (int)(h1.transform.position.x * h1.transform.position.x - h2.transform.position.x * h2.transform.position.x);
-		return x_sqr*2+y_sqr;
+		return x_sqr+y_sqr;
 	}
 
 	[ContextMenu("Clear")]
