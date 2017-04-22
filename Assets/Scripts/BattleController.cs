@@ -7,10 +7,9 @@ using System.Text;
 public class BattleController : MonoBehaviour {
 
 	public MapGenerator map;
-	public GameObject battleUI;
+	public BattleUI battleUI;
 	public Text battleTitle;
 	public Text turnOrdertext;
-	public Text actionButtonText;
 	public GameObject selectionMarker;
 
 	private List<BattleCharacter> characters;
@@ -57,10 +56,9 @@ public class BattleController : MonoBehaviour {
 		speedModifier = characters.Max((bc) => bc.stats.speed)*2;
 
 		map.gameObject.SetActive(true);
-		battleUI.SetActive(true);
+		battleUI.gameObject.SetActive(true);
 		//TODO activation animation
 		battleTitle.text = "Heroes vs " + enemyName;
-		actionButtonText.text = "Wait";
 		turnOrdertext.text = "";
 		Progress();
 	}
@@ -68,7 +66,7 @@ public class BattleController : MonoBehaviour {
 	public void Finish(bool instant=false)
 	{
 		selectionMarker.SetActive(false);
-		battleUI.SetActive(false);
+		battleUI.gameObject.SetActive(false);
 		if (instant)
 		{
 			map.gameObject.SetActive(false);

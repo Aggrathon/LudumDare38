@@ -23,7 +23,7 @@ public class PlayerCharacter : BattleCharacter
 		currentPriority = UnityEngine.Random.Range(0, stats.speed);
 	}
 
-	void DrawCard()
+	public void DrawCard()
 	{
 		if (skillPool.Count > 0)
 		{
@@ -36,11 +36,27 @@ public class PlayerCharacter : BattleCharacter
 		}
 	}
 
+	public bool SkillTargets(ref List<Hex> list, Skill skill)
+	{
+		switch (skill.target)
+		{
+			case Skill.Target.empty:
+				return controller.GetPossibleHexes(ref list, -1, skill.range, xyPosition) > 0;
+			case Skill.Target.enemy:
+				return controller.GetPossibleHexes(ref list, ENEMY_TEAM, skill.range, xyPosition) > 0;
+			case Skill.Target.friend:
+				return controller.GetPossibleHexes(ref list, PLAYER_TEAM, skill.range, xyPosition) > 0;
+			case Skill.Target.self:
+				return true;
+		}
+		return false;
+	}
+
 
 	public override void TakeTurn()
 	{
 		//TODO Implement UI
 		DrawCard();
-		StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
+		controller.battleUI.SetupPlayer(this);
 	}
 }

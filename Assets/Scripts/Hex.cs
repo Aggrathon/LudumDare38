@@ -9,6 +9,9 @@ public class Hex : MonoBehaviour {
 	public float heightVariation = 0.1f;
 	public float heightOffset = 1f;
 	public Color bloodColor = Color.red;
+	public Color selectColor = Color.green;
+
+	private Color currentColor;
 
 	[System.NonSerialized]
 	public BattleCharacter occupant;
@@ -19,7 +22,8 @@ public class Hex : MonoBehaviour {
 	public void Setup(Color c)
 	{
 		var mpb = new MaterialPropertyBlock();
-		mpb.SetColor("_Color", c * (1f - colorVariation) + Random.ColorHSV(0, 1, 0.3f, 0.6f, 0, 1) * colorVariation);
+		currentColor = c * (1f - colorVariation) + Random.ColorHSV(0, 1, 0.3f, 0.6f, 0, 1) * colorVariation;
+		mpb.SetColor("_Color", currentColor);
 		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 		height = Random.value * heightVariation + heightOffset;
 		transform.GetChild(0).position = occupantPosition;
@@ -31,11 +35,26 @@ public class Hex : MonoBehaviour {
 		occupant = null;
 		var mpb = new MaterialPropertyBlock();
 		mpb.SetColor("_Color", bloodColor);
+		currentColor = bloodColor;
 		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 	}
 
 	public void Reset()
 	{
 		occupant = null;
+	}
+
+	public void SetSelectable()
+	{
+		var mpb = new MaterialPropertyBlock();
+		mpb.SetColor("_Color", selectColor);
+		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
+	}
+
+	public void UnsetSelectable()
+	{
+		var mpb = new MaterialPropertyBlock();
+		mpb.SetColor("_Color", currentColor);
+		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 	}
 }

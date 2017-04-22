@@ -12,6 +12,9 @@ public abstract class Skill : ScriptableObject
 		self
 	}
 
+	[TextArea]
+	public string description;
+	public Texture2D icon;
 	public int range = 1;
 	public Target target;
 
