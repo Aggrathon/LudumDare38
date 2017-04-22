@@ -4,6 +4,7 @@ using System;
 
 public class EnemyCharacter : BattleCharacter
 {
+	[SerializeField] Skill defaultAttack;
 	[SerializeField] Character character;
 	[SerializeField] Skill[] abilities;
 
@@ -16,13 +17,56 @@ public class EnemyCharacter : BattleCharacter
 		skills = new List<Skill>();
 		if (abilities != null)
 			skills.AddRange(abilities);
+		skills.Add(defaultAttack);
 		currentPriority = UnityEngine.Random.Range(0, stats.speed);
 		buffer = new List<Hex>();
 	}
 
 	public override void TakeTurn()
 	{
-		//TODO Try skills
+		//Try skills
+		if(skills.Count > 0)
+		{
+			for (int i = 0; i < skills.Count; i++)
+			{
+				Skill s = skills[i];
+				switch (s.target)
+				{
+					case Skill.Target.empty:
+						if (controller.GetPossibleHexes(ref buffer, -1, s.range, xyPosition) > 0)
+						{
+							if (i != skills.Count - 1)
+								skills.RemoveAt(i);
+							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
+							return;
+						}
+						break;
+					case Skill.Target.enemy:
+						if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, s.range, xyPosition) > 0)
+						{
+							if (i != skills.Count - 1)
+								skills.RemoveAt(i);
+							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
+							return;
+						}
+						break;
+					case Skill.Target.friend:
+						if (controller.GetPossibleHexes(ref buffer, ENEMY_TEAM, s.range, xyPosition) > 0)
+						{
+							if (i != skills.Count - 1)
+								skills.RemoveAt(i);
+							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
+							return;
+						}
+						break;
+					case Skill.Target.self:
+						if (i!= skills.Count-1)
+							skills.RemoveAt(i);
+						ActivateSkill(s, null);
+						return;
+				}
+			}
+		}
 		//if not try move:
 		if(controller.GetPossibleHexes(ref buffer, PLAYER_TEAM) > 0)
 		{

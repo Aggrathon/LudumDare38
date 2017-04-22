@@ -48,6 +48,6 @@ public class PlayerCharacter : BattleCharacter
 	{
 		//TODO Death animation
 		controller.KillCharacter(this);
-		Destroy(gameObject, 1f);
+		Destroy(gameObject);
 	}
 }

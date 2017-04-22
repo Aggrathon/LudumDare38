@@ -15,7 +15,7 @@ public abstract class Skill : ScriptableObject
 	public int range = 1;
 	public Target target;
 
-	public abstract void Activate(Hex from, Hex to);
+	public abstract float Activate(Hex from, Hex to);
 }
 
 [CreateAssetMenu(menuName ="Data/Skill/Teleport")]
@@ -29,13 +29,14 @@ public class Teleport : Skill
 		target = Target.empty;
 	}
 
-	public override void Activate(Hex from, Hex to)
+	public override float Activate(Hex from, Hex to)
 	{
 		to.occupant = from.occupant;
 		from.occupant.transform.position = to.occupantPosition;
 		from.occupant = null;
 		if (particleEffect != null)
 			Instantiate(particleEffect, to.occupantPosition, Quaternion.identity);
+		return 0.5f;
 	}
 }
 
@@ -50,9 +51,10 @@ public class Shoot : Skill
 		target = Target.enemy;
 	}
 
-	public override void Activate(Hex from, Hex to)
+	public override float Activate(Hex from, Hex to)
 	{
 		to.occupant.ChangeHealth(damage);
+		return 0.5f;
 	}
 }
 
@@ -66,9 +68,11 @@ public class Attack : Skill
 		target = Target.enemy;
 	}
 
-	public override void Activate(Hex from, Hex to)
+	public override float Activate(Hex from, Hex to)
 	{
+		Debug.Log("BAM");
 		to.occupant.ChangeHealth(-from.occupant.stats.strength);
+		return 0.5f;
 	}
 }
 
@@ -83,8 +87,9 @@ public class Shield : Skill
 		target = Target.self;
 	}
 
-	public override void Activate(Hex from, Hex to)
+	public override float Activate(Hex from, Hex to)
 	{
 		from.occupant.ChangeHealth(amount);
+		return 0.5f;
 	}
 }

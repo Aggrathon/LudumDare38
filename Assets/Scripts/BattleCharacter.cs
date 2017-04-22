@@ -16,6 +16,7 @@ public abstract class BattleCharacter : MonoBehaviour
 	[NonSerialized]
 	public int currentPriority;
 
+	public Vector3 xyPosition { get { return new Vector3(transform.position.x, 0, transform.position.y); } }
 	public BattleController controller { get; set; }
 
 	public void ChangeHealth(int amount)
@@ -34,6 +35,14 @@ public abstract class BattleCharacter : MonoBehaviour
 			StartCoroutine(Utility.Jump(transform, target.occupantPosition, 0.5f, controller.Progress));
 		else
 			StartCoroutine(Utility.Jump(transform, target.occupantPosition, 0.5f));
+	}
+
+	protected void ActivateSkill(Skill skill, Hex target, bool thenProgress=true)
+	{
+		if (thenProgress)
+			StartCoroutine(Utility.RunLater(skill.Activate(controller.GetCharacterTile(this), target), controller.Progress));
+		else
+			skill.Activate(controller.GetCharacterTile(this), target);
 	}
 
 	protected abstract void OnDeath();

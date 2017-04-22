@@ -67,20 +67,36 @@ public class BattleController : MonoBehaviour {
 
 	public void Finish(bool instant=false)
 	{
-		if (!instant)
-			//TODO deactivation animation
 		selectionMarker.SetActive(false);
-		map.gameObject.SetActive(false);
 		battleUI.SetActive(false);
-		for (int i = 0; i < characters.Count; i++)
+		if (instant)
 		{
-			Destroy(characters[i].gameObject);
+			map.gameObject.SetActive(false);
+			for (int i = 0; i < characters.Count; i++)
+			{
+				Destroy(characters[i].gameObject);
+			}
+			characters.Clear();
 		}
-		characters.Clear();
+		else
+		{
+			//TODO deactivation animation
+			float delay = 1f;
+			for (int i = 0; i < characters.Count; i++)
+			{
+				Destroy(characters[i].gameObject, delay);
+			}
+			characters.Clear();
+			StartCoroutine(Utility.RunLater(delay, () => {
+				map.gameObject.SetActive(false);
+			}));
+		}
 	}
 
 	public void Progress()
 	{
+		if (characters.Count == 0)
+			return;
 		UpdateTurnOrder();
 		BattleCharacter currentCharacter = characters[0];
 		for (int i = 1; i < characters.Count; i++)
@@ -138,6 +154,7 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.ENEMY_TEAM)
 						return;
 				}
+				Finish();
 				//TODO Win Battle
 			}
 			else if (bc.team == BattleCharacter.PLAYER_TEAM)
@@ -147,6 +164,7 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.PLAYER_TEAM)
 						return;
 				}
+				Finish();
 				//TODO Loose Battle
 			}
 		}
