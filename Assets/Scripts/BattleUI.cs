@@ -32,7 +32,7 @@ public class BattleUI : MonoBehaviour
 
 	private void Update()
 	{
-		if(Input.GetKeyUp(KeyCode.Escape))
+		if(Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Tab))
 		{
 			Action();
 		}
