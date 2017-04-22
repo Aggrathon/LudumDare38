@@ -42,7 +42,7 @@ public class BattleUI : MonoBehaviour
 				Action();
 				return;
 			}
-			if (Input.GetMouseButtonUp(0)) {
+			if (Input.GetMouseButtonDown(0)) {
 				RaycastHit hit;
 				if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f))
 				{
@@ -78,6 +78,27 @@ public class BattleUI : MonoBehaviour
 	{
 		SelectAction();
 		character = pc;
+		while (pc.skills.Count > cardList.childCount)
+		{
+			Instantiate(cardList.GetChild(0), cardList, false);
+		}
+		for (int i = 0; i < pc.skills.Count; i++)
+		{
+			Transform tr = cardList.GetChild(i);
+			Skill sk = pc.skills[i];
+			Button b = tr.GetComponent<Button>();
+			tr.GetChild(0).GetComponent<Text>().text = sk.name;
+			tr.GetChild(1).GetComponent<Image>().sprite = sk.icon;
+			tr.GetChild(2).GetComponent<Text>().text = sk.description;
+			b.interactable = true;
+			b.onClick.RemoveAllListeners();
+			b.onClick.AddListener(() => { SelectTarget(sk, b); });
+			tr.gameObject.SetActive(true);
+		}
+		for (int i = pc.skills.Count; i < cardList.childCount; i++)
+		{
+			cardList.GetChild(i).gameObject.SetActive(false);
+		}
 	}
 
 	void View()

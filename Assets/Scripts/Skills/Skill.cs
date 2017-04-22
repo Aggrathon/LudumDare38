@@ -14,7 +14,7 @@ public abstract class Skill : ScriptableObject
 
 	[TextArea]
 	public string description;
-	public Texture2D icon;
+	public Sprite icon;
 	public int range = 1;
 	public Target target;
 
