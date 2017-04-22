@@ -62,7 +62,7 @@ public class EnemyCharacter : BattleCharacter
 		}
 		skills.Add(defaultAttack);
 		//if not try move:
-		if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM) > 0)
+		if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, 100, xyPosition) > 0)
 		{
 			Hex target = buffer[0];
 			for (int i = 1; i < buffer.Count; i++)
@@ -73,11 +73,10 @@ public class EnemyCharacter : BattleCharacter
 			if (controller.GetPossibleHexes(ref buffer, -1, 1, xyPosition) > 0)
 			{
 				Hex moveTarget = null;
-				float minDist = Vector2.SqrMagnitude(target.transform.position - xyPosition);
+				float minDist = Vector3.SqrMagnitude(target.transform.position - xyPosition)+1.5f;
 				for (int i = 0; i < buffer.Count; i++)
 				{
-					float epsilon = moveTarget == null ? 1.0f : 0.001f;
-					if (Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position) - minDist < epsilon)
+					if (Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position) < minDist)
 					{
 						moveTarget = buffer[i];
 						minDist = Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position);
