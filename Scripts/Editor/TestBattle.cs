@@ -6,6 +6,7 @@ public class TestBattle : ScriptableObject
 {
 	public PlayerCharacter[] players;
 	public Enemy[] enemies;
+	public Color color = Color.gray;
 }
 
 [CustomEditor(typeof(TestBattle))]
@@ -18,7 +19,7 @@ public class TestBattleEditor : Editor
 		if (GUILayout.Button("Run Test Battle"))
 		{
 			if (EditorApplication.isPlaying)
-				FindObjectOfType<BattleMap>().Battle((target as TestBattle).players, (target as TestBattle).enemies);
+				FindObjectOfType<BattleMap>().Battle((target as TestBattle).players, (target as TestBattle).enemies, (target as TestBattle).color);
 			else
 			{
 				EditorApplication.isPlaying = true;

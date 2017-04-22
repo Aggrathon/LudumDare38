@@ -26,9 +26,11 @@ public class BattleMap : MonoBehaviour {
 		clouds.Play(true);
 	}
 
-	public void Battle(PlayerCharacter[] players, Enemy[] enemies)
+	public void Battle(PlayerCharacter[] players, Enemy[] enemies, Color color)
 	{
-		Debug.Log("Battling");
+		loacationColor = color;
+		gameObject.SetActive(false);
+		gameObject.SetActive(true);
 		for (int i = 0; i < players.Length; i++)
 		{
 			playerStartingLocations[i].occupant = Instantiate(players[i].prefab, playerStartingLocations[i].occupantPosition, Quaternion.identity);
@@ -48,9 +50,9 @@ public class BattleMap : MonoBehaviour {
 			int numHexesOnRow = mapSize - i;
 			for (int j = 0; j < numHexesOnRow; j++)
 			{
-				CreateHex(j - numHexesOnRow / 2, i, false, i > mapSize / 2 - 2);
+				CreateHex(j - numHexesOnRow / 2, i, i > mapSize / 2 - 2, false);
 				if(i!=0)
-					CreateHex(j - numHexesOnRow / 2, -i, i > mapSize / 2 - 2, false);
+					CreateHex(j - numHexesOnRow / 2, -i, false, i > mapSize / 2 - 2);
 			}
 		}
 		playerStartingLocations.Sort(StartingHexComparer);
