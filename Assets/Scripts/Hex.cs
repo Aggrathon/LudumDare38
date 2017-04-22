@@ -8,6 +8,7 @@ public class Hex : MonoBehaviour {
 	public float colorVariation = 0.1f;
 	public float heightVariation = 0.1f;
 	public float heightOffset = 1f;
+	public Color bloodColor = Color.red;
 
 	[System.NonSerialized]
 	public BattleCharacter occupant;
@@ -23,6 +24,14 @@ public class Hex : MonoBehaviour {
 		height = Random.value * heightVariation + heightOffset;
 		transform.GetChild(0).position = occupantPosition;
 		occupant = null;
+	}
+
+	public void KillOccupant()
+	{
+		occupant = null;
+		var mpb = new MaterialPropertyBlock();
+		mpb.SetColor("_Color", bloodColor);
+		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 	}
 
 	public void Reset()

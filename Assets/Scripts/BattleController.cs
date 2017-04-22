@@ -147,6 +147,7 @@ public class BattleController : MonoBehaviour {
 	{
 		if (characters.Remove(bc))
 		{
+			GetCharacterTile(bc).KillOccupant();
 			if (bc.team == BattleCharacter.ENEMY_TEAM)
 			{
 				for (int i = 0; i < characters.Count; i++)
