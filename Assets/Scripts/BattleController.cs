@@ -11,6 +11,7 @@ public class BattleController : MonoBehaviour {
 	public Text battleTitle;
 	public Text turnOrdertext;
 	public Text actionButtonText;
+	public GameObject selectionMarker;
 
 	private List<BattleCharacter> characters;
 	private List<KeyValuePair<int, BattleCharacter>> turnOrder;
@@ -23,12 +24,12 @@ public class BattleController : MonoBehaviour {
 	}
 
 
-	public void Battle(PlayerCharacter[] players, Enemy[] enemies, string enemyName)
+	public void Battle(Hero[] players, EnemyCharacter[] enemies, string enemyName)
 	{
 		Battle(players, enemies, enemyName, Color.gray * 0.5f);
 	}
 
-	public void Battle(PlayerCharacter[] players, Enemy[] enemies, string enemyName, Color color)
+	public void Battle(Hero[] players, EnemyCharacter[] enemies, string enemyName, Color color)
 	{
 		characters.Clear();
 		for (int i = 0; i < map.hexes.Count; i++)
@@ -39,15 +40,16 @@ public class BattleController : MonoBehaviour {
 		//Setup Characters
 		for (int i = 0; i < players.Length; i++)
 		{
-			var bc = Instantiate(players[i].prefab, map.playerStartingLocations[i].occupantPosition, Quaternion.identity).GetComponent<BattleCharacter>();
-			bc.SetCharacter(players[i], players[i].skills, 1);
+			var bc = Instantiate(players[i].prefab, map.playerStartingLocations[i].occupantPosition, Quaternion.identity).GetComponent<PlayerCharacter>();
+			bc.SetCharacter(players[i]);
+			bc.controller = this;
 			map.playerStartingLocations[i].occupant = bc;
 			characters.Add(bc);
 		}
 		for (int i = 0; i < enemies.Length; i++)
 		{
-			var bc = Instantiate(enemies[i].prefab, map.enemyStartingLocations[i].occupantPosition, Quaternion.identity).GetComponent<BattleCharacter>();
-			bc.SetCharacter(enemies[i].character, null, 2);
+			var bc = Instantiate(enemies[i].gameObject, map.enemyStartingLocations[i].occupantPosition, Quaternion.identity).GetComponent<EnemyCharacter>();
+			bc.controller = this;
 			map.enemyStartingLocations[i].occupant = bc;
 			characters.Add(bc);
 		}
@@ -60,12 +62,12 @@ public class BattleController : MonoBehaviour {
 		battleTitle.text = "Heroes vs " + enemyName;
 		actionButtonText.text = "Wait";
 		turnOrdertext.text = "";
-		UpdateTurnOrder();
 		Progress();
 	}
 
 	public void Finish()
 	{
+		selectionMarker.SetActive(false);
 		map.gameObject.SetActive(false);
 		//TODO deactivation animation
 		battleUI.SetActive(false);
@@ -73,17 +75,16 @@ public class BattleController : MonoBehaviour {
 
 	public void Progress()
 	{
+		UpdateTurnOrder();
 		BattleCharacter currentCharacter = characters[0];
 		for (int i = 1; i < characters.Count; i++)
 		{
 			if (characters[i].stats.health > 0 && characters[i].currentPriority > currentCharacter.currentPriority)
 				currentCharacter = characters[i];
 		}
+		selectionMarker.transform.position = currentCharacter.transform.position;
+		currentCharacter.TakeTurn();
 		currentCharacter.currentPriority += currentCharacter.stats.speed - speedModifier;
-		//TODO Mark current character
-		//Run AI
-		//Or player UI
-		UpdateTurnOrder();
 	}
 
 	void UpdateTurnOrder()
@@ -103,7 +104,7 @@ public class BattleController : MonoBehaviour {
 		for (int i = 0; i < turnOrder.Count; i++)
 		{
 			var bc = turnOrder[i].Value;
-			if (bc.team == 1)
+			if (bc.team == BattleCharacter.PLAYER_TEAM)
 			{
 				sb.Append("<color=green>");
 				sb.Append(bc.stats.name);
@@ -117,6 +118,31 @@ public class BattleController : MonoBehaviour {
 			}
 		}
 		turnOrdertext.text = sb.ToString();
+	}
+
+	public void KillCharacter(BattleCharacter bc)
+	{
+		if (characters.Remove(bc))
+		{
+			if (bc.team == BattleCharacter.ENEMY_TEAM)
+			{
+				for (int i = 0; i < characters.Count; i++)
+				{
+					if (characters[i].team == BattleCharacter.ENEMY_TEAM)
+						return;
+				}
+				//TODO Win Battle
+			}
+			else if (bc.team == BattleCharacter.PLAYER_TEAM)
+			{
+				for (int i = 0; i < characters.Count; i++)
+				{
+					if (characters[i].team == BattleCharacter.PLAYER_TEAM)
+						return;
+				}
+				//TODO Loose Battle
+			}
+		}
 	}
 
 }

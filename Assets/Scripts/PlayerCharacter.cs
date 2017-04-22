@@ -1,10 +1,32 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
-[Serializable]
-public class PlayerCharacter : Character
+public class PlayerCharacter : BattleCharacter
 {
-	public GameObject prefab;
-	public List<Skill> skills;
+
+	public void SetCharacter(Hero hero)
+	{
+		stats = hero.Copy();
+		if (skills != null)
+			skills.Clear();
+		else
+			skills = new List<Skill>();
+		skills.AddRange(hero.skills);
+		team = PLAYER_TEAM;
+		currentPriority = UnityEngine.Random.Range(0, stats.speed);
+	}
+
+
+	public override void TakeTurn()
+	{
+		//TODO Implement UI
+	}
+
+	protected override void OnDeath()
+	{
+		//TODO Death animation
+		controller.KillCharacter(this);
+		Destroy(gameObject, 1f);
+	}
 }

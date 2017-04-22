@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Name: Test Battle
   m_EditorClassIdentifier: 
   players:
-  - name: Warrior
+  - name: Human Warrior
     health: 10
     strength: 4
     speed: 10
     prefab: {fileID: 1535211775005630, guid: baeb1f5b439e54744853a90777c69e06, type: 2}
     skills: []
-  - name: Archer
+  - name: Human Archer
     health: 10
     strength: 2
     speed: 12
     prefab: {fileID: 1535211775005630, guid: baeb1f5b439e54744853a90777c69e06, type: 2}
     skills: []
   enemies:
-  - {fileID: 11400000, guid: 938a200ed22b0aa43ae9526f8aeba6ce, type: 2}
-  - {fileID: 11400000, guid: 938a200ed22b0aa43ae9526f8aeba6ce, type: 2}
-  - {fileID: 11400000, guid: 938a200ed22b0aa43ae9526f8aeba6ce, type: 2}
+  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
+  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
+  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
+  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
   color: {r: 0.30299997, g: 0.24138735, b: 0.19785897, a: 1}

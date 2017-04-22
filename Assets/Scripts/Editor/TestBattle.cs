@@ -4,8 +4,8 @@ using UnityEditor;
 [CreateAssetMenu(menuName = "Data/TestBattle", order = 100)]
 public class TestBattle : ScriptableObject
 {
-	public PlayerCharacter[] players;
-	public Enemy[] enemies;
+	public Hero[] players;
+	public EnemyCharacter[] enemies;
 	public Color color = Color.gray;
 }
 
