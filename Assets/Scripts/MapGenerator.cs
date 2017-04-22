@@ -17,6 +17,7 @@ public class MapGenerator : MonoBehaviour {
 	{
 		if (transform.childCount < 2)
 			Generate();
+		gameObject.SetActive(false);
 	}
 
 	private void OnEnable()
