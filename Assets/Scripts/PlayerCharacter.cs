@@ -43,11 +43,4 @@ public class PlayerCharacter : BattleCharacter
 		DrawCard();
 		StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
 	}
-
-	protected override void OnDeath()
-	{
-		//TODO Death animation
-		controller.KillCharacter(this);
-		Destroy(gameObject);
-	}
 }

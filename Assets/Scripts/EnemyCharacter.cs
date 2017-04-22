@@ -25,46 +25,41 @@ public class EnemyCharacter : BattleCharacter
 	public override void TakeTurn()
 	{
 		//Try skills
-		if(skills.Count > 0)
+		if(skills.Count == 0)
+			skills.Add(defaultAttack);
+		for (int i = 0; i < skills.Count; i++)
 		{
-			for (int i = 0; i < skills.Count; i++)
+			Skill s = skills[i];
+			switch (s.target)
 			{
-				Skill s = skills[i];
-				switch (s.target)
-				{
-					case Skill.Target.empty:
-						if (controller.GetPossibleHexes(ref buffer, -1, s.range, xyPosition) > 0)
-						{
-							if (i != skills.Count - 1)
-								skills.RemoveAt(i);
-							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
-							return;
-						}
-						break;
-					case Skill.Target.enemy:
-						if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, s.range, xyPosition) > 0)
-						{
-							if (i != skills.Count - 1)
-								skills.RemoveAt(i);
-							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
-							return;
-						}
-						break;
-					case Skill.Target.friend:
-						if (controller.GetPossibleHexes(ref buffer, ENEMY_TEAM, s.range, xyPosition) > 0)
-						{
-							if (i != skills.Count - 1)
-								skills.RemoveAt(i);
-							ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
-							return;
-						}
-						break;
-					case Skill.Target.self:
-						if (i!= skills.Count-1)
-							skills.RemoveAt(i);
-						ActivateSkill(s, null);
+				case Skill.Target.empty:
+					if (controller.GetPossibleHexes(ref buffer, -1, s.range, xyPosition) > 0)
+					{
+						skills.RemoveAt(i);
+						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
 						return;
-				}
+					}
+					break;
+				case Skill.Target.enemy:
+					if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, s.range, xyPosition) > 0)
+					{
+						skills.RemoveAt(i);
+						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
+						return;
+					}
+					break;
+				case Skill.Target.friend:
+					if (controller.GetPossibleHexes(ref buffer, ENEMY_TEAM, s.range, xyPosition) > 0)
+					{
+						skills.RemoveAt(i);
+						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
+						return;
+					}
+					break;
+				case Skill.Target.self:
+					skills.RemoveAt(i);
+					ActivateSkill(s, null);
+					return;
 			}
 		}
 		//if not try move:
@@ -97,12 +92,5 @@ public class EnemyCharacter : BattleCharacter
 		}
 		//else do nothing
 		StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
-	}
-
-	protected override void OnDeath()
-	{
-		controller.KillCharacter(this);
-		//TODO Death animation
-		Destroy(gameObject, 1f);
 	}
 }

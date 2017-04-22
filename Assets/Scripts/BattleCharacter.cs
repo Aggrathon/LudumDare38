@@ -7,6 +7,8 @@ public abstract class BattleCharacter : MonoBehaviour
 	public const int ENEMY_TEAM = 2;
 	public const int PLAYER_TEAM = 1;
 
+	public GameObject deathFX;
+
 	[NonSerialized]
 	public int team;
 	[NonSerialized]
@@ -45,6 +47,11 @@ public abstract class BattleCharacter : MonoBehaviour
 			skill.Activate(controller.GetCharacterTile(this), target);
 	}
 
-	protected abstract void OnDeath();
+	protected void OnDeath()
+	{
+		controller.KillCharacter(this);
+		Instantiate(deathFX, transform.position, transform.rotation);
+		Destroy(gameObject);
+	}
 	public abstract void TakeTurn();
 }

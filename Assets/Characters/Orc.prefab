@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05389a5258a98b840a0727cd1053775f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFX: {fileID: 1356356526661832, guid: bff6f57df6830cd4f8a21758dc5fdaf0, type: 2}
   defaultAttack: {fileID: 11400000, guid: 8ff893197b9c577419873f5edf05246c, type: 2}
   character:
     name: Orc
