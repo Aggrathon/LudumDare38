@@ -8,13 +8,19 @@ public class BattleMap : MonoBehaviour {
 	public GameObject hexPrefab;
 	public float hexDistance = 1.05f;
 	public int mapSize = 7;
+	public ParticleSystem clouds;
 	[Header("Battle Options")]
 	public Color loacationColor;
 
 	private void Start()
 	{
-		if (transform.childCount == 0)
+		if (transform.childCount < 2)
 			Generate();
+	}
+
+	private void OnEnable()
+	{
+		clouds.Play(true);
 	}
 
 	[ContextMenu("Generate")]
@@ -36,7 +42,7 @@ public class BattleMap : MonoBehaviour {
 	[ContextMenu("Clear")]
 	void Clear()
 	{
-		for (int i = transform.childCount - 1; i >= 0; i--)
+		for (int i = transform.childCount - 1; i > 0; i--)
 		{
 			DestroyImmediate(transform.GetChild(i).gameObject);
 		}

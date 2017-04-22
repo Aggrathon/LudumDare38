@@ -155,3 +155,4 @@ MonoBehaviour:
   map: {fileID: 0}
   colorVariation: 0.05
   heightVariation: 0.4
+  heightOffset: 1
