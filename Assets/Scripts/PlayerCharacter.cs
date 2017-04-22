@@ -15,7 +15,7 @@ public class PlayerCharacter : BattleCharacter
 		skillPool = new List<Skill>();
 		skillPool.AddRange(hero.skills);
 		Utility.Shuffle<Skill>(ref skillPool);
-		for (int i = 0; i < hero.startingCards; i++)
+		for (int i = 0; i < hero.startingCards-1; i++)
 		{
 			DrawCard();
 		}

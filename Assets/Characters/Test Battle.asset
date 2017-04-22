@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - name: Human Warrior
-    health: 10
+    health: 12
     strength: 4
     speed: 10
-    prefab: {fileID: 1535211775005630, guid: baeb1f5b439e54744853a90777c69e06, type: 2}
+    prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
     skills: []
     startingCards: 3
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
@@ -29,8 +29,8 @@ MonoBehaviour:
     startingCards: 3
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   enemies:
-  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
-  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
-  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
-  - {fileID: 114027223110570452, guid: 2c28e1e5bb14f5c4d898bdab8cf7b1b1, type: 2}
+  - {fileID: 114215001503204838, guid: 2106b27191d33a34a8f3c0b4f60f2950, type: 2}
+  - {fileID: 114215001503204838, guid: 2106b27191d33a34a8f3c0b4f60f2950, type: 2}
+  - {fileID: 114215001503204838, guid: 2106b27191d33a34a8f3c0b4f60f2950, type: 2}
+  - {fileID: 114215001503204838, guid: 2106b27191d33a34a8f3c0b4f60f2950, type: 2}
   color: {r: 0.30299997, g: 0.24138735, b: 0.19785897, a: 1}
