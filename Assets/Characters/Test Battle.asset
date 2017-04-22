@@ -8,9 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 36d592b642e445c49b03192330ca7b98, type: 3}
   m_Name: Test Battle
-  m_EditorClassIdentifier: Assembly-CSharp::TestBattle
+  m_EditorClassIdentifier: 
   players:
   - name: Human Warrior
     health: 12
