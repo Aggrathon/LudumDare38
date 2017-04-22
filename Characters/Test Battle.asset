@@ -19,3 +19,4 @@ MonoBehaviour:
     prefab: {fileID: 1535211775005630, guid: baeb1f5b439e54744853a90777c69e06, type: 2}
   enemies:
   - {fileID: 11400000, guid: 938a200ed22b0aa43ae9526f8aeba6ce, type: 2}
+  color: {r: 0.30299997, g: 0.24138735, b: 0.19785897, a: 1}
