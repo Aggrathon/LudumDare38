@@ -14,7 +14,6 @@ public class Attack : Skill
 
 	public override float Activate(Hex from, Hex to)
 	{
-		Debug.Log("BAM");
 		to.occupant.ChangeHealth(-from.occupant.stats.strength);
 		return 0.5f;
 	}

@@ -172,8 +172,7 @@ public class BattleController : MonoBehaviour {
 	public int GetPossibleHexes(ref List<Hex> list, int team=-1, float range=100f, Vector3 position = new Vector3())
 	{
 		list.Clear();
-		range *= map.hexDistance*1.05f;
-		range *= range;
+		range = range*range*map.hexDistance*map.hexDistance*1.05f;
 		for (int i = 0; i < map.hexes.Count; i++)
 		{
 			Hex h = map.hexes[i];

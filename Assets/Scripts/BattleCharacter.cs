@@ -18,7 +18,7 @@ public abstract class BattleCharacter : MonoBehaviour
 	[NonSerialized]
 	public int currentPriority;
 
-	public Vector3 xyPosition { get { return new Vector3(transform.position.x, 0, transform.position.y); } }
+	public Vector3 xyPosition { get { return new Vector3(transform.position.x, 0, transform.position.z); } }
 	public BattleController controller { get; set; }
 
 	public void ChangeHealth(int amount)

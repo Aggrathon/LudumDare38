@@ -67,13 +67,13 @@ public class EnemyCharacter : BattleCharacter
 			Hex target = buffer[0];
 			for (int i = 1; i < buffer.Count; i++)
 			{
-				if (Vector3.SqrMagnitude(buffer[i].transform.position - transform.position) < Vector3.SqrMagnitude(target.transform.position - transform.position))
+				if (Vector3.SqrMagnitude(buffer[i].transform.position - xyPosition) < Vector3.SqrMagnitude(target.transform.position - xyPosition))
 					target = buffer[i];
 			}
-			if (controller.GetPossibleHexes(ref buffer, -1, 1, new Vector3(transform.position.x, 0, transform.position.y)) > 0)
+			if (controller.GetPossibleHexes(ref buffer, -1, 1, xyPosition) > 0)
 			{
 				Hex moveTarget = null;
-				float minDist = Vector2.SqrMagnitude(new Vector3(target.transform.position.x - transform.position.x, target.transform.position.z - transform.position.z));
+				float minDist = Vector2.SqrMagnitude(target.transform.position - xyPosition);
 				for (int i = 0; i < buffer.Count; i++)
 				{
 					float epsilon = moveTarget == null ? 1.0f : 0.001f;

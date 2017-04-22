@@ -119,6 +119,7 @@ public class BattleUI : MonoBehaviour
 
 	public void SelectTarget(Skill skill, Button button)
 	{
+		Unselect();
 		if (skill.target == Skill.Target.self)
 		{
 			DoSkill(skill, null);

@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1e67876d0cf1e418417202a06dac89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorVariation: 0.05
-  heightVariation: 0.4
+  colorVariation: 0.07
+  heightVariation: 0.45
   heightOffset: 1
   bloodColor: {r: 0.359, g: 0.04308, b: 0, a: 1}
+  selectColor: {r: 0, g: 1, b: 0, a: 1}

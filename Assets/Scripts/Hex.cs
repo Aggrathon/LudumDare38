@@ -57,4 +57,13 @@ public class Hex : MonoBehaviour {
 		mpb.SetColor("_Color", currentColor);
 		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 	}
+
+	private void OnDrawGizmos()
+	{
+		if(occupant != null)
+		{
+			Gizmos.DrawWireSphere(occupantPosition + new Vector3(0, 0.5f, 0), 0.8f);
+			Gizmos.DrawLine(occupantPosition + new Vector3(0, 1, 0), occupant.transform.position + new Vector3(0, 1, 0));
+		}
+	}
 }
