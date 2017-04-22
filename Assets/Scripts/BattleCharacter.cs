@@ -30,10 +30,10 @@ public abstract class BattleCharacter : MonoBehaviour
 	{
 		controller.GetCharacterTile(this).occupant = null;
 		target.occupant = this;
-		//TODO Animate move
-		transform.position = target.occupantPosition;
 		if (thenProgress)
-			StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
+			StartCoroutine(Utility.Jump(transform, target.occupantPosition, 0.5f, controller.Progress));
+		else
+			StartCoroutine(Utility.Jump(transform, target.occupantPosition, 0.5f));
 	}
 
 	protected abstract void OnDeath();

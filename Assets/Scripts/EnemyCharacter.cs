@@ -38,7 +38,7 @@ public class EnemyCharacter : BattleCharacter
 				float minDist = Vector2.SqrMagnitude(new Vector3(target.transform.position.x - transform.position.x, target.transform.position.z - transform.position.z));
 				for (int i = 0; i < buffer.Count; i++)
 				{
-					if (Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position) - minDist < 0.01f)
+					if (Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position) - minDist < 0.2f)
 					{
 						moveTarget = buffer[i];
 						minDist = Vector3.SqrMagnitude(buffer[i].transform.position - target.transform.position);

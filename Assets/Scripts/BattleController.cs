@@ -31,7 +31,7 @@ public class BattleController : MonoBehaviour {
 
 	public void Battle(Hero[] players, EnemyCharacter[] enemies, string enemyName, Color color)
 	{
-		characters.Clear();
+		Finish(true);
 		for (int i = 0; i < map.hexes.Count; i++)
 		{
 			map.hexes[i].Setup(color);
@@ -65,12 +65,18 @@ public class BattleController : MonoBehaviour {
 		Progress();
 	}
 
-	public void Finish()
+	public void Finish(bool instant=false)
 	{
+		if (!instant)
+			//TODO deactivation animation
 		selectionMarker.SetActive(false);
 		map.gameObject.SetActive(false);
-		//TODO deactivation animation
 		battleUI.SetActive(false);
+		for (int i = 0; i < characters.Count; i++)
+		{
+			Destroy(characters[i].gameObject);
+		}
+		characters.Clear();
 	}
 
 	public void Progress()
@@ -149,7 +155,7 @@ public class BattleController : MonoBehaviour {
 	public int GetPossibleHexes(ref List<Hex> list, int team=-1, float range=100f, Vector3 position = new Vector3())
 	{
 		list.Clear();
-		range *= map.hexDistance*1.05f;
+		range *= map.hexDistance*1.01f;
 		range *= range;
 		for (int i = 0; i < map.hexes.Count; i++)
 		{
