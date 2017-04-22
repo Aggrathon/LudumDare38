@@ -10,6 +10,14 @@ public class Hex : MonoBehaviour {
 	public float heightVariation = 0.1f;
 	public float heightOffset = 1f;
 
+	[System.NonSerialized]
+	public GameObject occupant;
+	[System.NonSerialized]
+	public float height;
+	public Vector3 occupantPosition { get { return transform.position + new Vector3(0, height, 0); } }
+
+
+
 	private void OnEnable()
 	{
 		if (map == null)
@@ -17,6 +25,8 @@ public class Hex : MonoBehaviour {
 		var mpb = new MaterialPropertyBlock();
 		mpb.SetColor("_Color", map.loacationColor * (1f - colorVariation) + Random.ColorHSV(0, 1, 0.3f, 0.6f, 0, 1) * colorVariation);
 		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
-		transform.GetChild(0).localPosition = new Vector3(0, Random.value * heightVariation + heightOffset, 0);
+		height = Random.value * heightVariation + heightOffset;
+		transform.GetChild(0).position = occupantPosition;
+		occupant = null;
 	}
 }
