@@ -10,4 +10,10 @@ public static class Utility
 		yield return null;
 		action();
 	}
+
+	public static IEnumerator RunLater(float time, Action action)
+	{
+		yield return new WaitForSeconds(time);
+		action();
+	}
 }

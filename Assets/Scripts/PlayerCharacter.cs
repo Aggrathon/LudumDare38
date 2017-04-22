@@ -21,6 +21,7 @@ public class PlayerCharacter : BattleCharacter
 	public override void TakeTurn()
 	{
 		//TODO Implement UI
+		StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
 	}
 
 	protected override void OnDeath()

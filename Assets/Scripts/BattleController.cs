@@ -82,6 +82,7 @@ public class BattleController : MonoBehaviour {
 			if (characters[i].stats.health > 0 && characters[i].currentPriority > currentCharacter.currentPriority)
 				currentCharacter = characters[i];
 		}
+		selectionMarker.SetActive(true);
 		selectionMarker.transform.position = currentCharacter.transform.position;
 		currentCharacter.TakeTurn();
 		currentCharacter.currentPriority += currentCharacter.stats.speed - speedModifier;
@@ -99,7 +100,7 @@ public class BattleController : MonoBehaviour {
 				turnOrder.Add(new KeyValuePair<int, BattleCharacter>(c.currentPriority+c.stats.speed-speedModifier, c));
 			}
 		}
-		turnOrder.Sort((v1, v2) => v1.Key - v2.Key);
+		turnOrder.Sort((v1, v2) => v2.Key - v1.Key);
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < turnOrder.Count; i++)
 		{
@@ -143,6 +144,35 @@ public class BattleController : MonoBehaviour {
 				//TODO Loose Battle
 			}
 		}
+	}
+
+	public int GetPossibleHexes(ref List<Hex> list, int team=-1, float range=100f, Vector3 position = new Vector3())
+	{
+		list.Clear();
+		range *= map.hexDistance*1.05f;
+		range *= range;
+		for (int i = 0; i < map.hexes.Count; i++)
+		{
+			Hex h = map.hexes[i];
+			if(Vector3.SqrMagnitude(h.transform.position-position) < range)
+			{
+				if (team == -1 && h.occupant == null)
+					list.Add(h);
+				else if (h.occupant != null && h.occupant.team == team)
+					list.Add(h);
+			}
+		}
+		return list.Count;
+	}
+
+	public Hex GetCharacterTile(BattleCharacter bc)
+	{
+		for (int i = 0; i < map.hexes.Count; i++)
+		{
+			if (map.hexes[i].occupant == bc)
+				return map.hexes[i];
+		}
+		return map.hexes[0];
 	}
 
 }

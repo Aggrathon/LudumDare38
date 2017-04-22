@@ -21,9 +21,19 @@ public abstract class BattleCharacter : MonoBehaviour
 	public void ChangeHealth(int amount)
 	{
 		stats.health += amount;
-		//TODO Animate
+		//TODO Animate health change
 		if (stats.health <= 0)
 			OnDeath();
+	}
+
+	public void Move(Hex target, bool thenProgress=false)
+	{
+		controller.GetCharacterTile(this).occupant = null;
+		target.occupant = this;
+		//TODO Animate move
+		transform.position = target.occupantPosition;
+		if (thenProgress)
+			StartCoroutine(Utility.RunLater(0.2f, controller.Progress));
 	}
 
 	protected abstract void OnDeath();

@@ -22,6 +22,7 @@ public class Hex : MonoBehaviour {
 		GetComponentInChildren<MeshRenderer>().SetPropertyBlock(mpb);
 		height = Random.value * heightVariation + heightOffset;
 		transform.GetChild(0).position = occupantPosition;
+		occupant = null;
 	}
 
 	public void Reset()
