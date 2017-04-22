@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UI;
 
 public abstract class BattleCharacter : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public abstract class BattleCharacter : MonoBehaviour
 	public const int PLAYER_TEAM = 1;
 
 	public GameObject deathFX;
+	public Text healthText;
+	public Text healthDelta;
 
 	[NonSerialized]
 	public int team;
@@ -21,10 +24,22 @@ public abstract class BattleCharacter : MonoBehaviour
 	public Vector3 xyPosition { get { return new Vector3(transform.position.x, 0, transform.position.z); } }
 	public BattleController controller { get; set; }
 
+	private void Start()
+	{
+		healthDelta.text = "";
+		healthText.text = stats.health.ToString();
+	}
+
 	public void ChangeHealth(int amount)
 	{
+		if (amount > 0)
+			healthDelta.text = "<color=green>+" + amount + "</color>";
+		else
+			healthDelta.text = "<color=red>" + amount + "</color>";
+		healthDelta.enabled = true;
+		StartCoroutine(Utility.RunLater(1f, () => healthDelta.text = ""));
 		stats.health += amount;
-		//TODO Animate health change
+		healthText.text = stats.health.ToString();
 		if (stats.health <= 0)
 			OnDeath();
 	}

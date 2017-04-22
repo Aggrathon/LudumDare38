@@ -377,6 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1356356526661832, guid: bff6f57df6830cd4f8a21758dc5fdaf0, type: 2}
+  healthText: {fileID: 114243227406227474}
+  healthDelta: {fileID: 114762593857314276}
 --- !u!114 &114353280879222316
 MonoBehaviour:
   m_ObjectHideFlags: 1

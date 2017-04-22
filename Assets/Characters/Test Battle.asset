@@ -24,7 +24,7 @@ MonoBehaviour:
     health: 10
     strength: 2
     speed: 12
-    prefab: {fileID: 1535211775005630, guid: baeb1f5b439e54744853a90777c69e06, type: 2}
+    prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
     skills: []
     startingCards: 3
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}

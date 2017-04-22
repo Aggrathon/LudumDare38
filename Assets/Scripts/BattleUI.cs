@@ -23,6 +23,7 @@ public class BattleUI : MonoBehaviour
 	List<Hex> buffer;
 	PlayerCharacter character;
 	Skill skill;
+	int counter = 3;
 
 	private void OnEnable()
 	{
@@ -76,7 +77,6 @@ public class BattleUI : MonoBehaviour
 
 	public void SetupPlayer(PlayerCharacter pc)
 	{
-		SelectAction();
 		character = pc;
 		while (pc.skills.Count > cardList.childCount)
 		{
@@ -99,6 +99,13 @@ public class BattleUI : MonoBehaviour
 		{
 			cardList.GetChild(i).gameObject.SetActive(false);
 		}
+		if (counter > 0)
+		{
+			counter--;
+			View();
+		}
+		else
+			SelectAction();
 	}
 
 	void View()

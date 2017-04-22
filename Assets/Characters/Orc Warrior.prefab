@@ -445,6 +445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1356356526661832, guid: bff6f57df6830cd4f8a21758dc5fdaf0, type: 2}
+  healthText: {fileID: 114185323528082938}
+  healthDelta: {fileID: 114186208106874526}
   defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   character:
     name: Orc Warrior
