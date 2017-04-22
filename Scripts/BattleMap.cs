@@ -73,6 +73,9 @@ public class BattleMap : MonoBehaviour {
 		}
 		playerStartingLocations.Clear();
 		enemyStartingLocations.Clear();
+#if UNITY_EDITOR
+		UnityEditor.EditorUtility.SetDirty(gameObject);
+#endif
 	}
 
 	void CreateHex(int x, int y, bool playerStart = false, bool enemyStart = false)
