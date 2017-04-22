@@ -56,6 +56,7 @@ public abstract class BattleCharacter : MonoBehaviour
 
 	public void ActivateSkill(Skill skill, Hex target, bool thenProgress=true)
 	{
+		skills.Remove(skill);
 		if (thenProgress)
 			StartCoroutine(Utility.RunLater(skill.Activate(controller.GetCharacterTile(this), target), controller.Progress));
 		else

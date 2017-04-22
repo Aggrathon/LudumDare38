@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Skill/Shoot")]
 public class Shoot : Skill
 {
-	public int damage;
+	public int damage = 3;
 
 	public Shoot()
 	{
@@ -15,7 +15,7 @@ public class Shoot : Skill
 
 	public override float Activate(Hex from, Hex to)
 	{
-		to.occupant.ChangeHealth(damage);
+		to.occupant.ChangeHealth(-damage);
 		return 0.5f;
 	}
 }

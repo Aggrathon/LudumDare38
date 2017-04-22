@@ -17,15 +17,20 @@ MonoBehaviour:
     strength: 4
     speed: 10
     prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
-    skills: []
+    skills:
+    - {fileID: 11400000, guid: 3b0ce12fd3ae6de479b0b72684017738, type: 2}
     startingCards: 3
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   - name: Human Archer
     health: 10
     strength: 2
     speed: 12
-    prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
-    skills: []
+    prefab: {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
+    skills:
+    - {fileID: 11400000, guid: 7a9f69b011b572846a9d458f97751b7a, type: 2}
+    - {fileID: 11400000, guid: 7a9f69b011b572846a9d458f97751b7a, type: 2}
+    - {fileID: 11400000, guid: 7a9f69b011b572846a9d458f97751b7a, type: 2}
+    - {fileID: 11400000, guid: 36f21608df480944ba588b02c4325c39, type: 2}
     startingCards: 3
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   enemies:

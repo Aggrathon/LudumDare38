@@ -33,7 +33,6 @@ public class EnemyCharacter : BattleCharacter
 				case Skill.Target.empty:
 					if (controller.GetPossibleHexes(ref buffer, -1, s.range, xyPosition) > 0)
 					{
-						skills.RemoveAt(i);
 						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
 						return;
 					}
@@ -41,7 +40,6 @@ public class EnemyCharacter : BattleCharacter
 				case Skill.Target.enemy:
 					if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, s.range, xyPosition) > 0)
 					{
-						skills.RemoveAt(i);
 						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
 						return;
 					}
@@ -49,13 +47,11 @@ public class EnemyCharacter : BattleCharacter
 				case Skill.Target.friend:
 					if (controller.GetPossibleHexes(ref buffer, ENEMY_TEAM, s.range, xyPosition) > 0)
 					{
-						skills.RemoveAt(i);
 						ActivateSkill(s, buffer[UnityEngine.Random.Range(0, buffer.Count - 1)]);
 						return;
 					}
 					break;
 				case Skill.Target.self:
-					skills.RemoveAt(i);
 					ActivateSkill(s, null);
 					return;
 			}
