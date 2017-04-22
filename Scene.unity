@@ -133,7 +133,7 @@ RectTransform:
   m_GameObject: {fileID: 154910913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999968, y: 0.9999968, z: 0.9999968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1505826377}
   m_Father: {fileID: 2039326315}
@@ -163,7 +163,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0de5bcc8d57a662409b5b1fdb28543b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fe70024f97e1d9458dd86e514c2bfbd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -322,7 +322,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0de5bcc8d57a662409b5b1fdb28543b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fe70024f97e1d9458dd86e514c2bfbd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -456,7 +456,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0de5bcc8d57a662409b5b1fdb28543b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fe70024f97e1d9458dd86e514c2bfbd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -503,7 +503,7 @@ MonoBehaviour:
   clouds: {fileID: 1877216308}
   playerStartingLocations: []
   enemyStartingLocations: []
-  loacationColor: {r: 0.222, g: 0.222, b: 0.222, a: 1}
+  hexes: []
 --- !u!4 &1112382414
 Transform:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 1620939318}
   - component: {fileID: 1620939317}
   m_Layer: 0
-  m_Name: Text
+  m_Name: ActionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -773,6 +773,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1648525583}
+  - component: {fileID: 1648525582}
   m_Layer: 0
   m_Name: Battle
   m_TagString: Untagged
@@ -780,6 +781,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1648525582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648525581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0842ef397affd8341b71166e17dd854a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 1112382413}
+  battleUI: {fileID: 2039326314}
+  battleTitle: {fileID: 1976541690}
+  turnOrdertext: {fileID: 2131190276}
+  actionButtonText: {fileID: 1620939317}
 --- !u!4 &1648525583
 Transform:
   m_ObjectHideFlags: 0
@@ -880,7 +897,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1529344508
+  randomSeed: -2128310898
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3899,7 +3916,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1164834490
+  randomSeed: 1907244863
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6917,7 +6934,7 @@ GameObject:
   - component: {fileID: 1976541691}
   - component: {fileID: 1976541690}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Battle Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7087,7 +7104,7 @@ GameObject:
   - component: {fileID: 2131190277}
   - component: {fileID: 2131190276}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Turn Order
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

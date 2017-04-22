@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleMap : MonoBehaviour {
+public class MapGenerator : MonoBehaviour {
 
 	[Header("Map Generation")]
 	public GameObject hexPrefab;
@@ -11,9 +11,7 @@ public class BattleMap : MonoBehaviour {
 	public ParticleSystem clouds;
 	public List<Hex> playerStartingLocations;
 	public List<Hex> enemyStartingLocations;
-
-	[Header("Battle Options")]
-	public Color loacationColor;
+	public List<Hex> hexes;
 
 	private void Start()
 	{
@@ -26,28 +24,13 @@ public class BattleMap : MonoBehaviour {
 		clouds.Play(true);
 	}
 
-	public void Battle(PlayerCharacter[] players, Enemy[] enemies, Color color)
-	{
-		loacationColor = color;
-		gameObject.SetActive(false);
-		gameObject.SetActive(true);
-		for (int i = 0; i < players.Length; i++)
-		{
-			playerStartingLocations[i].occupant = Instantiate(players[i].prefab, playerStartingLocations[i].occupantPosition, Quaternion.identity);
-		}
-		for (int i = 0; i < enemies.Length; i++)
-		{
-			enemyStartingLocations[i].occupant = Instantiate(enemies[i].prefab, enemyStartingLocations[i].occupantPosition, Quaternion.identity);
-		}
-	}
-
 	[ContextMenu("Generate")]
 	void Generate()
 	{
 		Clear();
 		for (int i = 0; i < mapSize/2+1; i++)
 		{
-			int numHexesOnRow = mapSize - i;
+			int numHexesOnRow = mapSize - i + 1;
 			for (int j = 0; j < numHexesOnRow; j++)
 			{
 				CreateHex(j - numHexesOnRow / 2, i, i > mapSize / 2 - 2, false);
@@ -75,6 +58,7 @@ public class BattleMap : MonoBehaviour {
 		}
 		playerStartingLocations.Clear();
 		enemyStartingLocations.Clear();
+		hexes.Clear();
 #if UNITY_EDITOR
 		UnityEditor.EditorUtility.SetDirty(gameObject);
 #endif
@@ -85,11 +69,13 @@ public class BattleMap : MonoBehaviour {
 		float wSize = Mathf.Cos(30f * Mathf.Deg2Rad) * hexDistance;
 		float hSize = (Mathf.Sin(30f * Mathf.Deg2Rad) + 1) * 0.5f * hexDistance;
 		float xOffset = wSize * 0.5f;
-		GameObject go = Instantiate(hexPrefab, new Vector3(y*hSize, 0, x * wSize + Mathf.Abs(y % 2) * xOffset), Quaternion.identity, transform);
+		GameObject go = Instantiate(hexPrefab, new Vector3(y*hSize, 0, x * wSize + Mathf.Abs((y+1) % 2) * xOffset), Quaternion.identity, transform);
 		go.name = "Tile_" + x + "_" + y;
+		Hex hex = go.GetComponent<Hex>();
+		hexes.Add(hex);
 		if (playerStart)
-			playerStartingLocations.Add(go.GetComponent<Hex>());
+			playerStartingLocations.Add(hex);
 		if (enemyStart)
-			enemyStartingLocations.Add(go.GetComponent<Hex>());
+			enemyStartingLocations.Add(hex);
 	}
 }
