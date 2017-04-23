@@ -13,6 +13,7 @@ public class Equipment : ScriptableObject
 	public int speedDelta = 0;
 	public List<Skill> skills;
 	public Skill defaultSkill = null;
+	public bool canHasTwo = false;
 
 	public void Equip(Hero hero)
 	{

@@ -89,6 +89,7 @@ public class PopupManager : MonoBehaviour {
 			if (luh.level > GameData.instance.heroes[i].level)
 				luh = GameData.instance.heroes[i];
 		}
+		luh.level++;
 		switch (index)
 		{
 			case 0:

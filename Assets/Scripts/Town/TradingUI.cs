@@ -29,7 +29,7 @@ public class TradingUI : MonoBehaviour {
 			var b = tr.GetChild(0).GetComponent<Button>();
 			int cost = item.value * 3 / 2;
 			b.onClick.RemoveAllListeners();
-			if (cost > money)
+			if (cost > money || (!item.canHasTwo && cust.equipment.Contains(item)))
 			{
 				b.interactable = false;
 			}
@@ -40,6 +40,7 @@ public class TradingUI : MonoBehaviour {
 				{
 					GameData.instance.gold -= cost;
 					cust.equipment.Add(item);
+					item.Equip(cust);
 					Trade(trad, cust);
 				});
 			}
