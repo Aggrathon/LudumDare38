@@ -1864,6 +1864,48 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &916546128
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531304226152666, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2782d62e824c7fa47a7abd2f2e99872c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &975907953
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,7 +4879,7 @@ MonoBehaviour:
   lookPrefabs:
   - {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
   - {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
-  - {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
+  - {fileID: 1050643541639498, guid: 481d3d4246a485c46a25f8262926de59, type: 2}
   - {fileID: 1123132028022786, guid: 50ddf0bd3f426a44ab577d4a3338e4d8, type: 2}
   youTemplate: {fileID: 11400000, guid: f0f9d379ae49c59469aa30a73bc26d62, type: 2}
   followers:

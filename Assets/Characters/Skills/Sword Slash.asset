@@ -16,3 +16,4 @@ MonoBehaviour:
   range: 1
   target: 1
   damage: 1
+  sound: {fileID: 8300000, guid: 92d2cda510baf97498e7d3d70d826229, type: 3}

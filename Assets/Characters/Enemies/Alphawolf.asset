@@ -14,3 +14,5 @@ MonoBehaviour:
   goundColor: {r: 0.09881599, g: 0.25, b: 0.035249993, a: 0.5}
   enemies:
   - {fileID: 114215001503204838, guid: a6b33a03ba64fcd42a84bbd40d25b5d6, type: 2}
+  - {fileID: 114215001503204838, guid: 75a61222bdfa897499c402053eacf731, type: 2}
+  - {fileID: 114215001503204838, guid: 75a61222bdfa897499c402053eacf731, type: 2}

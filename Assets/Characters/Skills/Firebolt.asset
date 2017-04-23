@@ -18,3 +18,4 @@ MonoBehaviour:
   damage: 5
   particleEffect: {fileID: 1675188923367386, guid: 7f481a6acb686894bbaa21a635c943af,
     type: 2}
+  sound: {fileID: 8300000, guid: 382e90f534079fe4f91f4313afb5b21a, type: 3}

@@ -7,6 +7,7 @@ public class Shoot : Skill
 {
 	public int damage = 3;
 	public GameObject particleEffect;
+	public AudioClip sound;
 
 	public Shoot()
 	{
@@ -19,6 +20,8 @@ public class Shoot : Skill
 		to.occupant.ChangeHealth(-damage);
 		if (particleEffect != null)
 			Instantiate(particleEffect, to.occupantPosition + Vector3.up, Quaternion.identity);
+		if (sound != null)
+			AudioManager.PlayAt(sound, to.occupantPosition + Vector3.up);
 		return 0.5f;
 	}
 }

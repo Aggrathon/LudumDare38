@@ -16,3 +16,5 @@ MonoBehaviour:
   range: 100
   target: 1
   damage: 5
+  particleEffect: {fileID: 0}
+  sound: {fileID: 8300000, guid: d1332d5d71cfc6144b334febc57b1ba5, type: 3}
