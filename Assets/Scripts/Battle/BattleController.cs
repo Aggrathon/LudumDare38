@@ -14,6 +14,7 @@ public class BattleController : MonoBehaviour {
 	public GameObject selectionMarker;
 	public WorldSinker world;
 	public CameraController camera;
+	public AudioClip failSound;
 
 	private List<BattleCharacter> characters;
 	private List<KeyValuePair<int, BattleCharacter>> turnOrder;
@@ -176,6 +177,7 @@ public class BattleController : MonoBehaviour {
 						return;
 				}
 				EventLog.Log("You lost the battle!");
+				AudioManager.PlayAt(failSound, camera.transform.position);
 				Finish();
 			}
 		}
