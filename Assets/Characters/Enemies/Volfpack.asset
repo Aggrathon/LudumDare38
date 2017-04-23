@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302c6d300f4aab8448adfe85cc7d723a, type: 3}
   m_Name: Volfpack
   m_EditorClassIdentifier: 
-  goundColor: {r: 0.25, g: 0.14654501, b: 0.0024999976, a: 1}
+  goundColor: {r: 0.07450303, g: 0.25, b: 0.044499993, a: 1}
   enemies:
   - {fileID: 114215001503204838, guid: 75a61222bdfa897499c402053eacf731, type: 2}
   - {fileID: 114215001503204838, guid: 75a61222bdfa897499c402053eacf731, type: 2}
