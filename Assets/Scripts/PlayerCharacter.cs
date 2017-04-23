@@ -5,7 +5,7 @@ public class PlayerCharacter : BattleCharacter
 {
 
 	List<Skill> skillPool;
-	Skill defaultSkill;
+	[System.NonSerialized] public Skill defaultSkill;
 
 	public void SetCharacter(Hero hero)
 	{
@@ -21,6 +21,10 @@ public class PlayerCharacter : BattleCharacter
 		}
 		team = PLAYER_TEAM;
 		currentPriority = UnityEngine.Random.Range(0, stats.speed);
+		for (int i = 0; i < hero.equipment.Count; i++)
+		{
+			hero.equipment[i].SetupBattleCharacter(this);
+		}
 	}
 
 	public void DrawCard()

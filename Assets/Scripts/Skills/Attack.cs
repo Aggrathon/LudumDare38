@@ -6,6 +6,8 @@ using UnityEngine;
 public class Attack : Skill
 {
 
+	public int damage = 0;
+
 	public Attack()
 	{
 		range = 1;
@@ -14,7 +16,7 @@ public class Attack : Skill
 
 	public override float Activate(Hex from, Hex to)
 	{
-		to.occupant.ChangeHealth(-from.occupant.stats.strength);
+		to.occupant.ChangeHealth(-from.occupant.stats.strength-damage);
 		return 0.5f;
 	}
 }

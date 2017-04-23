@@ -4847,14 +4847,21 @@ MonoBehaviour:
     prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
     skills: []
     startingCards: 3
+    equipment:
+    - {fileID: 11400000, guid: a01d75e7e255ec346ae604de7782a544, type: 2}
+    - {fileID: 11400000, guid: 61142c409e2913d4eacfd0dd52b18d79, type: 2}
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   - name: Old Man
     health: 8
     strength: 2
     speed: 8
     prefab: {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
-    skills: []
+    skills:
+    - {fileID: 11400000, guid: 2cee03731dc302b4e8cf027745b071a6, type: 2}
+    - {fileID: 11400000, guid: 3764beb5ddf09f94cb63717fb3a774d6, type: 2}
+    - {fileID: 11400000, guid: 3764beb5ddf09f94cb63717fb3a774d6, type: 2}
     startingCards: 3
+    equipment: []
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   - name: Wierd Uncle
     health: 10
@@ -4863,6 +4870,9 @@ MonoBehaviour:
     prefab: {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
     skills: []
     startingCards: 3
+    equipment:
+    - {fileID: 11400000, guid: 6417f19f208fd8547931a7cd5248fad9, type: 2}
+    - {fileID: 11400000, guid: e34d913613258bb4ca4cf71698f31813, type: 2}
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   - name: Drunkard
     health: 12
@@ -4871,11 +4881,12 @@ MonoBehaviour:
     prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
     skills: []
     startingCards: 3
+    equipment: []
     defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}
   equipment:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 61142c409e2913d4eacfd0dd52b18d79, type: 2}
+  - {fileID: 11400000, guid: 6417f19f208fd8547931a7cd5248fad9, type: 2}
+  - {fileID: 11400000, guid: c745d160515b6df448648582890a63fb, type: 2}
   goldAmount: 100
 --- !u!4 &1953951118
 Transform:

@@ -154,6 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorVariation: 0.07
   heightVariation: 0.45
-  heightOffset: 1
+  heightOffset: 0
   bloodColor: {r: 0.359, g: 0.04308, b: 0, a: 1}
   selectColor: {r: 0.47628802, g: 1, b: 0.21600002, a: 1}
