@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Equipment")]
 public class Equipment : ScriptableObject
 {
+	[TextArea]
+	public string description;
 	public int value = 60;
 	public int healthDelta = 0;
 	public int strengthDelta = 0;

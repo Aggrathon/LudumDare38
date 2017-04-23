@@ -10,6 +10,7 @@ public class Hero : Character
 	public int startingCards = 3;
 	public List<Equipment> equipment;
 	public Skill defaultAttack;
+	public int level = 0;
 
 	public Hero()
 	{
@@ -33,5 +34,6 @@ public class Hero : Character
 		prefab = other.prefab;
 		startingCards = other.startingCards;
 		defaultAttack = other.defaultAttack;
+		level = other.level;
 	}
 }

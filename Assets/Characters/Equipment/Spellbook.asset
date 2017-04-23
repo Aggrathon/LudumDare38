@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf9ce65840b8ac4aa3428c7fa757872, type: 3}
   m_Name: Spellbook
   m_EditorClassIdentifier: 
+  description: '"Magic for dummies"'
   value: 60
   healthDelta: 0
   strengthDelta: 0

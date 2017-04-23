@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf9ce65840b8ac4aa3428c7fa757872, type: 3}
   m_Name: Steel Armour
   m_EditorClassIdentifier: 
+  description: High quality heavy armour
   value: 200
   healthDelta: 8
   strengthDelta: -1

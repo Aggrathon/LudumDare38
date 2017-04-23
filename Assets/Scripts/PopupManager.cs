@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +10,10 @@ public class PopupManager : MonoBehaviour {
 	public GameObject tipPopup;
 	public GameObject tradeSelect;
 	public GameObject tradePopup;
+	public GameObject levelPopup;
+	public Text levelStats;
+	public GameObject levelSkill;
+	public Skill[] skillsToGet;
 	public BattleController battle;
 
 	public static PopupManager instance { get; protected set; }
@@ -72,7 +76,52 @@ public class PopupManager : MonoBehaviour {
 
 	public void LevelUp()
 	{
+		Hero luh = GameData.instance.heroes[0];
+		for (int i = 1; i < GameData.instance.heroes.Count; i++)
+		{
+			if (luh.level > GameData.instance.heroes[i].level)
+				luh = GameData.instance.heroes[i];
+		}
+		levelStats.text = string.Format("{0}\n{1}\n{2}\n{3}\n{4}\n{5}", luh.name, luh.health, luh.strength, luh.speed, luh.skills.Count, luh.equipment.Count);
+		levelPopup.SetActive(true);
+		EventLog.Log(luh.name + " levelled up!");
+	}
 
+	public void LevelUpReward(int index)
+	{
+		Hero luh = GameData.instance.heroes[0];
+		for (int i = 1; i < GameData.instance.heroes.Count; i++)
+		{
+			if (luh.level > GameData.instance.heroes[i].level)
+				luh = GameData.instance.heroes[i];
+		}
+		switch (index)
+		{
+			case 0:
+				luh.health += 2;
+				break;
+			case 1:
+				luh.strength += 1;
+				break;
+			case 2:
+				luh.speed += 2;
+				break;
+			case 3:
+				for (int i = 1; i < levelSkill.transform.childCount; i++)
+				{
+					Skill s = skillsToGet[Random.Range(0, skillsToGet.Length - 1)];
+					var tr = levelSkill.transform.GetChild(i);
+					var b = tr.GetComponent<Button>();
+					b.onClick.RemoveAllListeners();
+					b.onClick.AddListener(() => {
+						luh.skills.Add(s);
+						levelSkill.SetActive(false);
+					});
+					tr.GetComponentInChildren<Text>().text = s.name;
+				}
+				levelSkill.SetActive(true);
+				break;
+		}
 	}
 
 	public void Progress()

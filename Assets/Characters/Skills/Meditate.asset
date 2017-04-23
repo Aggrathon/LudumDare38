@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Meditate
   m_EditorClassIdentifier: 
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   range: 1
   target: 3

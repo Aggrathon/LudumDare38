@@ -30,6 +30,6 @@ public class Quest : MonoBehaviour
 		onComplete.Invoke();
 		gameObject.SetActive(false);
 
-		EventLog.Log(string.Format("Quest '{0}' completed!\nReward: {1} gold and {2} experience", title, goldReward, expReward));
+		EventLog.Log(string.Format("Quest '{0}' completed!\nReward: {1} gold and {2} xp", title, goldReward, expReward));
 	}
 }

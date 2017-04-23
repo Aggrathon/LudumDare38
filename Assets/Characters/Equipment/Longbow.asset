@@ -9,8 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf9ce65840b8ac4aa3428c7fa757872, type: 3}
-  m_Name: Long Bow
+  m_Name: Longbow
   m_EditorClassIdentifier: 
+  description: A longbow with limited ammunition
   value: 120
   healthDelta: 0
   strengthDelta: 0
