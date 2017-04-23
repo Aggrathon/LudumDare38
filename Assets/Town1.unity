@@ -15737,6 +15737,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1506586292}
+  - component: {fileID: 1506586293}
   m_Layer: 0
   m_Name: Dolly
   m_TagString: Untagged
@@ -15758,6 +15759,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506586293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506586291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03993e57ee4802a4f9dbfb99364fd5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 10
+  maxRange: 20
 --- !u!1 &1507895860
 GameObject:
   m_ObjectHideFlags: 0
