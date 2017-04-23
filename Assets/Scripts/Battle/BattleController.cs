@@ -63,7 +63,7 @@ public class BattleController : MonoBehaviour {
 		camera.SetBattleMode();
 		battleTitle.text = "Heroes vs " + enemyName;
 		UpdateTurnOrder();
-		StartCoroutine(Utility.RunLater(world.animationLength, Progress));
+		StartCoroutine(Utility.RunLater(world.animationLength+0.5f, Progress));
 	}
 
 	public void Finish(bool instant=false)

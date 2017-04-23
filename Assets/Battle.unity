@@ -249,10 +249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 750113044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe296564f1bf52d4b915c16dbbd4cf78, type: 3}
+  m_Script: {fileID: 11500000, guid: e77ce6053c93a424fb4c88f1ce22ce81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battle: {fileID: 11400000, guid: f02531179b73a6943bcf536dae6e0b26, type: 2}
+  group: {fileID: 0}
+  battle: {fileID: 11400000, guid: 797a792041827e644a70ea2d6968460f, type: 2}
 --- !u!4 &750113046
 Transform:
   m_ObjectHideFlags: 0
