@@ -47,9 +47,9 @@ public class IntroController : MonoBehaviour {
 		}
 	}
 
-	public void LoadLevel(string level)
+	public void NextLevel()
 	{
-		SceneManager.LoadScene(level);
-		GameData.instance.currentTown = level;
+		SceneManager.LoadScene(1);
+		GameData.instance.currentScene = 1;
 	}
 }

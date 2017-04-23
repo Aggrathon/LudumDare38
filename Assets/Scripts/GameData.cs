@@ -7,7 +7,7 @@ public class GameData : MonoBehaviour {
 	public List<Hero> heroes;
 	public int gold;
 	public int experience;
-	public string currentTown;
+	public int currentScene;
 
 
 
@@ -30,6 +30,7 @@ public class GameData : MonoBehaviour {
 
 	private void Awake()
 	{
+		heroes = new List<Hero>();
 		_instance = this;
 	}
 }
