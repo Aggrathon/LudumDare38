@@ -17,7 +17,6 @@ MonoBehaviour:
   strengthDelta: 0
   speedDelta: 0
   skills:
-  - {fileID: 11400000, guid: 922399ed44487344884fba8a392ac779, type: 2}
-  - {fileID: 11400000, guid: 2cee03731dc302b4e8cf027745b071a6, type: 2}
   - {fileID: 11400000, guid: 3764beb5ddf09f94cb63717fb3a774d6, type: 2}
+  - {fileID: 11400000, guid: 2cee03731dc302b4e8cf027745b071a6, type: 2}
   defaultSkill: {fileID: 0}

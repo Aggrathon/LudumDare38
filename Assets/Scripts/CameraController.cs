@@ -34,13 +34,13 @@ public class CameraController : MonoBehaviour {
 		Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 		float mpx = Input.mousePosition.x / Screen.width;
 		float mpy = Input.mousePosition.y / Screen.height;
-		if (mpx < 0.03f && mpx > 0)
+		if (mpx < 0.04f && mpx > 0)
 			dir.x -= 1f;
-		else if (mpx > 0.97f && mpx < 1)
+		else if (mpx > 0.96f && mpx < 1)
 			dir.x += 1f;
-		if (mpy < 0.03f && mpy > 0)
+		if (mpy < 0.04f && mpy > 0)
 			dir.z -= 1f;
-		else if (mpy > 0.97f && mpy < 1)
+		else if (mpy > 0.96f && mpy < 1)
 			dir.z += 1f;
 		dir = transform.position + dir * (Time.deltaTime * scrollSpeed);
 		if (dir.sqrMagnitude > maxRange * maxRange)
@@ -72,9 +72,13 @@ public class CameraController : MonoBehaviour {
 	IEnumerator SwitchToBattleMode()
 	{
 		float time = 0;
+		float rel_cam_height = transform.GetChild(0).transform.position.y / normHeight;
 		while (time < 1)
 		{
 			normHeight = Mathf.Lerp(mapHeight, battleHeight, time);
+			var pos = transform.GetChild(0).transform.position;
+			pos.y = normHeight * rel_cam_height;
+			transform.GetChild(0).transform.position = pos;
 			maxRange = Mathf.Lerp(mapRange, battleRange, time);
 			transform.eulerAngles = new Vector3(Mathf.Lerp(mapAngle, battleAngle, time), 0, 0);
 			time += Time.deltaTime / switchSpeed;
@@ -85,9 +89,13 @@ public class CameraController : MonoBehaviour {
 	IEnumerator SwitchToMapMode()
 	{
 		float time = 1;
+		float rel_cam_height = transform.GetChild(0).transform.position.y / normHeight;
 		while (time > 0)
 		{
 			normHeight = Mathf.Lerp(mapHeight, battleHeight, time);
+			var pos = transform.GetChild(0).transform.position;
+			pos.y = normHeight * rel_cam_height;
+			transform.GetChild(0).transform.position = pos;
 			maxRange = Mathf.Lerp(mapRange, battleRange, time);
 			transform.eulerAngles = new Vector3(Mathf.Lerp(mapAngle, battleAngle, time), 0, 0);
 			time -= Time.deltaTime / switchSpeed;

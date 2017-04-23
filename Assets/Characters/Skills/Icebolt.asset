@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   range: 100
   target: 1
-  damage: 3
+  damage: 4

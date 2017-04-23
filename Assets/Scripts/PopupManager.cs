@@ -9,7 +9,7 @@ public class PopupManager : MonoBehaviour {
 	public GameObject questPopup;
 	public GameObject tipPopup;
 	public GameObject tradeSelect;
-	public GameObject tradePopup;
+	public TradingUI tradePopup;
 	public GameObject levelPopup;
 	public Text levelStats;
 	public GameObject levelSkill;
@@ -44,7 +44,7 @@ public class PopupManager : MonoBehaviour {
 		tipPopup.SetActive(true);
 	}
 
-	public void Trade(Object trader)
+	public void Trade(Trader trader)
 	{
 		var tr = tradeSelect.transform;
 		while (tr.childCount < GameData.instance.heroes.Count + 2)
@@ -55,7 +55,7 @@ public class PopupManager : MonoBehaviour {
 			Hero h = GameData.instance.heroes[i];
 			b.onClick.RemoveAllListeners();
 			b.onClick.AddListener(() => {
-				TradeWith(h, trader);
+				tradePopup.Trade(trader, h);
 				tradeSelect.SetActive(false);
 			});
 			b.GetComponentInChildren<Text>().text = h.name;
@@ -66,12 +66,6 @@ public class PopupManager : MonoBehaviour {
 			tr.GetChild(i).gameObject.SetActive(false);
 		}
 		tradeSelect.SetActive(true);
-	}
-
-	public void TradeWith(Hero hero, Object trader)
-	{
-		//TODO trade window
-		Debug.Log("Trading");
 	}
 
 	public void LevelUp()
