@@ -11,6 +11,8 @@ public class BattleController : MonoBehaviour {
 	public Text battleTitle;
 	public Text turnOrdertext;
 	public GameObject selectionMarker;
+	public WorldSinker world;
+	public CameraController camera;
 
 	private List<BattleCharacter> characters;
 	private List<KeyValuePair<int, BattleCharacter>> turnOrder;
@@ -57,10 +59,11 @@ public class BattleController : MonoBehaviour {
 
 		map.gameObject.SetActive(true);
 		battleUI.gameObject.SetActive(true);
-		//TODO activation animation
+		world.Sink();
+		camera.SetBattleMode();
 		battleTitle.text = "Heroes vs " + enemyName;
-		turnOrdertext.text = "";
-		Progress();
+		UpdateTurnOrder();
+		StartCoroutine(Utility.RunLater(world.animationLength, Progress));
 	}
 
 	public void Finish(bool instant=false)
@@ -78,8 +81,7 @@ public class BattleController : MonoBehaviour {
 		}
 		else
 		{
-			//TODO deactivation animation
-			float delay = 1f;
+			float delay = world.animationLength;
 			for (int i = 0; i < characters.Count; i++)
 			{
 				Destroy(characters[i].gameObject, delay);
@@ -89,6 +91,8 @@ public class BattleController : MonoBehaviour {
 				map.gameObject.SetActive(false);
 			}));
 		}
+		world.Raise();
+		camera.UnsetBattleMode();
 	}
 
 	public void Progress()

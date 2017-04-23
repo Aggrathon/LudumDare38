@@ -34,9 +34,9 @@ public class MapGenerator : MonoBehaviour {
 			int numHexesOnRow = mapSize - i + 1;
 			for (int j = 0; j < numHexesOnRow; j++)
 			{
-				CreateHex(j - numHexesOnRow / 2, i, i > mapSize / 2 - 2, false);
+				CreateHex(j - numHexesOnRow / 2, i, false, i > mapSize / 2 - 2);
 				if(i!=0)
-					CreateHex(j - numHexesOnRow / 2, -i, false, i > mapSize / 2 - 2);
+					CreateHex(j - numHexesOnRow / 2, -i, i > mapSize / 2 - 2, false);
 			}
 		}
 		playerStartingLocations.Sort(StartingHexComparer);
@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour {
 		float wSize = Mathf.Cos(30f * Mathf.Deg2Rad) * hexDistance;
 		float hSize = (Mathf.Sin(30f * Mathf.Deg2Rad) + 1) * 0.5f * hexDistance;
 		float xOffset = wSize * 0.5f;
-		GameObject go = Instantiate(hexPrefab, new Vector3(y*hSize, 0, x * wSize + Mathf.Abs((y+1) % 2) * xOffset), Quaternion.identity, transform);
+		GameObject go = Instantiate(hexPrefab, new Vector3(x * wSize + Mathf.Abs((y + 1) % 2) * xOffset, 0, y * hSize), Quaternion.identity, transform);
 		go.name = "Tile_" + x + "_" + y;
 		Hex hex = go.GetComponent<Hex>();
 		hexes.Add(hex);

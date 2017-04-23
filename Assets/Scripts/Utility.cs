@@ -31,7 +31,7 @@ public static class Utility
 
 	public static IEnumerator Jump(Transform jumper, Vector3 destination, float time = 0.5f, Action action = null, float jumpHeight = 0.5f)
 	{
-		Vector3 start = jumper.transform.position;
+		Vector3 start = jumper.position;
 		float t = 0f;
 		while (t < 1f)
 		{
@@ -41,6 +41,27 @@ public static class Utility
 			yield return null;
 		}
 		jumper.position = destination;
+		if (action != null)
+			action();
+	}
+
+	public static IEnumerator EaseInOut(Transform transform, Vector3 destination, float time = 0.5f, Action action = null)
+	{
+		Vector3 start = transform.position;
+		float t = 0f;
+		while (t < 1f)
+		{
+			if (t < 0.5)
+				transform.position = Vector3.Lerp(start, destination, t * t * 2);
+			else
+			{
+				float nt = t - 1;
+				transform.position = Vector3.Lerp(start, destination, 1 - nt * nt * 2);
+			}
+			t += Time.deltaTime / time;
+			yield return null;
+		}
+		transform.position = destination;
 		if (action != null)
 			action();
 	}
