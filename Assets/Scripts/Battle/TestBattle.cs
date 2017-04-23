@@ -11,6 +11,11 @@ public class TestBattle : ScriptableObject
 
 	public void Battle(BattleController bc)
 	{
-		bc.Battle(players.Cast<Hero>().ToList<Hero>(), enemies, name, color);
+		List<Hero> list = new List<Hero>();
+		foreach (var item in players)
+		{
+			list.Add(item);
+		}
+		bc.Battle(list, enemies, name, color);
 	}
 }

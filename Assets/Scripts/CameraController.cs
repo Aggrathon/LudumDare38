@@ -48,14 +48,15 @@ public class CameraController : MonoBehaviour {
 		transform.position = dir;
 
 		float zoom = -Input.GetAxis("Mouse ScrollWheel");
-		var tr = transform.GetChild(0).transform;
-		Vector3 pos = tr.position;
-		zoom += pos.y;
-		if (zoom < normHeight && zoom < normHeight * (1 - heightVariance))
-			zoom = normHeight * (1 - heightVariance);
-		else if (zoom > normHeight && zoom > normHeight * (1 + heightVariance))
-			zoom = normHeight * (1 + heightVariance);
-		tr.position = new Vector3(pos.x, zoom, pos.z);
+		if (zoom != 0) {
+			var tr = transform.GetChild(0).transform;
+			zoom += tr.localPosition.y;
+			if (zoom < normHeight && zoom < normHeight * (1 - heightVariance))
+				zoom = normHeight * (1 - heightVariance);
+			else if (zoom > normHeight && zoom > normHeight * (1 + heightVariance))
+				zoom = normHeight * (1 + heightVariance);
+			tr.localPosition = new Vector3(0, zoom, 0);
+		}
 	}
 
 	public void SetBattleMode()
@@ -72,13 +73,11 @@ public class CameraController : MonoBehaviour {
 	IEnumerator SwitchToBattleMode()
 	{
 		float time = 0;
-		float rel_cam_height = transform.GetChild(0).transform.position.y / normHeight;
+		float rel_cam_height = transform.GetChild(0).transform.localPosition.y / normHeight;
 		while (time < 1)
 		{
 			normHeight = Mathf.Lerp(mapHeight, battleHeight, time);
-			var pos = transform.GetChild(0).transform.position;
-			pos.y = normHeight * rel_cam_height;
-			transform.GetChild(0).transform.position = pos;
+			transform.GetChild(0).transform.localPosition = new Vector3(0, normHeight * rel_cam_height, 0);
 			maxRange = Mathf.Lerp(mapRange, battleRange, time);
 			transform.eulerAngles = new Vector3(Mathf.Lerp(mapAngle, battleAngle, time), 0, 0);
 			time += Time.deltaTime / switchSpeed;
@@ -89,13 +88,11 @@ public class CameraController : MonoBehaviour {
 	IEnumerator SwitchToMapMode()
 	{
 		float time = 1;
-		float rel_cam_height = transform.GetChild(0).transform.position.y / normHeight;
+		float rel_cam_height = transform.GetChild(0).transform.localPosition.y / normHeight;
 		while (time > 0)
 		{
 			normHeight = Mathf.Lerp(mapHeight, battleHeight, time);
-			var pos = transform.GetChild(0).transform.position;
-			pos.y = normHeight * rel_cam_height;
-			transform.GetChild(0).transform.position = pos;
+			transform.GetChild(0).transform.localPosition = new Vector3(0, normHeight * rel_cam_height, 0);
 			maxRange = Mathf.Lerp(mapRange, battleRange, time);
 			transform.eulerAngles = new Vector3(Mathf.Lerp(mapAngle, battleAngle, time), 0, 0);
 			time -= Time.deltaTime / switchSpeed;
