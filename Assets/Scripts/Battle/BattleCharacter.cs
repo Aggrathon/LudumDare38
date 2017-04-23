@@ -64,6 +64,7 @@ public abstract class BattleCharacter : MonoBehaviour
 
 	protected void OnDeath()
 	{
+		EventLog.Log(string.Format("{0} was defeated!", name));
 		controller.KillCharacter(this);
 		Instantiate(deathFX, transform.position, transform.rotation);
 		Destroy(gameObject);

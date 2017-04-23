@@ -55,7 +55,6 @@ public class PlayerCharacter : BattleCharacter
 
 	public override void TakeTurn()
 	{
-		//TODO Implement UI
 		DrawCard();
 		controller.battleUI.SetupPlayer(this);
 	}

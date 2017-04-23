@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eeb7eec8522a14c981bd8333681db6, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  description: Restore some health
+  description: 'Restore some health
+
+
+    Range: 1'
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   range: 1
   target: 2

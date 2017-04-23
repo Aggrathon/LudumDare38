@@ -166,7 +166,6 @@ public class BattleController : MonoBehaviour {
 					callback();
 				else
 					Debug.Log("No Callback");
-				//TODO Win Battle
 				Finish();
 			}
 			else if (bc.team == BattleCharacter.PLAYER_TEAM)
@@ -176,7 +175,7 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.PLAYER_TEAM)
 						return;
 				}
-				//TODO Loose Battle
+				EventLog.Log("You lost the battle!");
 				Finish();
 			}
 		}

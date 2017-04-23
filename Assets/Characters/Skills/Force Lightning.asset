@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7027ca4cd1a98eb4f973a9cd454caeae, type: 3}
   m_Name: Force Lightning
   m_EditorClassIdentifier: 
-  description: Spray electricity at an enemy
+  description: 'Spray electricity at an enemy.
+
+
+    Range: 2'
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   range: 2
   target: 1

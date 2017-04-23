@@ -28,7 +28,8 @@ public class Quest : MonoBehaviour
 		}
 		GameData.instance.experience += expReward;
 		onComplete.Invoke();
-		//TODO popup reward
 		gameObject.SetActive(false);
+
+		EventLog.Log(string.Format("Quest '{0}' completed!\nReward: {1} gold and {2} experience", title, goldReward, expReward));
 	}
 }
