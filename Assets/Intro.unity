@@ -4838,7 +4838,8 @@ MonoBehaviour:
   - {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
   - {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
   - {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
-  - {fileID: 1123132028022786, guid: 2106b27191d33a34a8f3c0b4f60f2950, type: 2}
+  - {fileID: 1123132028022786, guid: 50ddf0bd3f426a44ab577d4a3338e4d8, type: 2}
+  youTemplate: {fileID: 11400000, guid: f0f9d379ae49c59469aa30a73bc26d62, type: 2}
   followers:
   - {fileID: 11400000, guid: 215224a86935ec2488f54aebde317940, type: 2}
   - {fileID: 11400000, guid: d1780b78c2c4bb24089d37a6d1db5767, type: 2}
@@ -5128,8 +5129,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1953951117}
-        m_MethodName: LoadLevel
-        m_Mode: 5
+        m_MethodName: NextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

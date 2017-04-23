@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155802772ea677848b1993e06bcb78d6, type: 3}
+  m_Name: The Protagonist
+  m_EditorClassIdentifier: 
+  hero:
+    name: The Protagonist
+    health: 10
+    strength: 2
+    speed: 10
+    prefab: {fileID: 1050643541639498, guid: ff79ffbe803e7ea4dbc41943ba26e8a1, type: 2}
+    skills: []
+    startingCards: 3
+    equipment: []
+    defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}

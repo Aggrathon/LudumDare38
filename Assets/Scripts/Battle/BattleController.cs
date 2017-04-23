@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
+using System;
 
 public class BattleController : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class BattleController : MonoBehaviour {
 	private List<BattleCharacter> characters;
 	private List<KeyValuePair<int, BattleCharacter>> turnOrder;
 	private int speedModifier;
+	private Action callback;
 
 	private void Awake()
 	{
@@ -30,7 +32,7 @@ public class BattleController : MonoBehaviour {
 		Battle(players, enemies, enemyName, Color.gray * 0.5f);
 	}
 
-	public void Battle(List<Hero> players, EnemyCharacter[] enemies, string enemyName, Color color)
+	public void Battle(List<Hero> players, EnemyCharacter[] enemies, string enemyName, Color color, Action callback = null)
 	{
 		Finish(true);
 		for (int i = 0; i < map.hexes.Count; i++)
@@ -56,6 +58,7 @@ public class BattleController : MonoBehaviour {
 		}
 		characters.Sort((bc1, bc2) => bc1.currentPriority - bc2.currentPriority);
 		speedModifier = characters.Max((bc) => bc.stats.speed)*2;
+		this.callback = callback;
 
 		map.gameObject.SetActive(true);
 		battleUI.gameObject.SetActive(true);
@@ -68,8 +71,12 @@ public class BattleController : MonoBehaviour {
 
 	public void Finish(bool instant=false)
 	{
+		StopAllCoroutines();
 		selectionMarker.SetActive(false);
 		battleUI.gameObject.SetActive(false);
+		world.Raise();
+		camera.UnsetBattleMode();
+		callback = null;
 		if (instant)
 		{
 			map.gameObject.SetActive(false);
@@ -91,8 +98,6 @@ public class BattleController : MonoBehaviour {
 				map.gameObject.SetActive(false);
 			}));
 		}
-		world.Raise();
-		camera.UnsetBattleMode();
 	}
 
 	public void Progress()
@@ -157,8 +162,12 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.ENEMY_TEAM)
 						return;
 				}
-				Finish();
+				if (callback != null)
+					callback();
+				else
+					Debug.Log("No Callback");
 				//TODO Win Battle
+				Finish();
 			}
 			else if (bc.team == BattleCharacter.PLAYER_TEAM)
 			{
@@ -167,8 +176,8 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.PLAYER_TEAM)
 						return;
 				}
-				Finish();
 				//TODO Loose Battle
+				Finish();
 			}
 		}
 	}

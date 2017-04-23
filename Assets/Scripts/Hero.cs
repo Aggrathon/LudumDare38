@@ -17,6 +17,13 @@ public class Hero : Character
 		equipment = new List<Equipment>();
 	}
 
+	public Hero(string name)
+	{
+		this.name = name;
+		skills = new List<Skill>();
+		equipment = new List<Equipment>();
+	}
+
 	public Hero(Hero other) : base(other)
 	{
 		skills = new List<Skill>();

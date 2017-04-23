@@ -7,9 +7,15 @@ public class IntroController : MonoBehaviour {
 
 	public Transform mainCamera;
 	public GameObject[] lookPrefabs;
+	public HeroCharacter youTemplate;
 	public HeroCharacter[] followers;
 	public Equipment[] equipment;
 	public int goldAmount = 100;
+
+	private void Start()
+	{
+		GameData.Reset();
+	}
 
 	public void NextScreen(Transform screen)
 	{
@@ -18,7 +24,7 @@ public class IntroController : MonoBehaviour {
 
 	public void SetQuest(int i)
 	{
-		GameData.instance.heroes.Add(new Hero());
+		GameData.instance.heroes.Add(youTemplate);
 	}
 
 	public void SetLook(int i)
@@ -55,7 +61,7 @@ public class IntroController : MonoBehaviour {
 
 	public void NextLevel()
 	{
-		SceneManager.LoadScene(1);
 		GameData.instance.currentScene = 1;
+		SceneManager.LoadScene(GameData.instance.currentScene);
 	}
 }

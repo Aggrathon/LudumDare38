@@ -1,13 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameData : MonoBehaviour {
 
 	public List<Hero> heroes;
-	public int gold;
-	public int experience;
-	public int currentScene;
+	public int gold = 0;
+	public int experience = 0;
+	public int currentScene = 0;
 
 
 
@@ -26,6 +27,15 @@ public class GameData : MonoBehaviour {
 				return _instance;
 			}
 		}
+	}
+
+	public static void Reset()
+	{
+		if (_instance != null)
+			Destroy(_instance.gameObject);
+		_instance = null;
+		if (instance.currentScene != 0)
+			Debug.LogError("GameData not reset successfully");
 	}
 
 	private void Awake()

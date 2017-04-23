@@ -25,6 +25,8 @@ public class EnemyCharacter : BattleCharacter
 	public override void TakeTurn()
 	{
 		//Try skills
+		if (skills.Count == 0 || skills[skills.Count - 1] != defaultAttack)
+			skills.Add(defaultAttack);
 		for (int i = 0; i < skills.Count; i++)
 		{
 			Skill s = skills[i];
@@ -56,7 +58,6 @@ public class EnemyCharacter : BattleCharacter
 					return;
 			}
 		}
-		skills.Add(defaultAttack);
 		//if not try move:
 		if (controller.GetPossibleHexes(ref buffer, PLAYER_TEAM, 100, xyPosition) > 0)
 		{
