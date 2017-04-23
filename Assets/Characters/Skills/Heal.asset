@@ -19,3 +19,5 @@ MonoBehaviour:
   range: 1
   target: 2
   amount: 4
+  particleEffect: {fileID: 1356356526661832, guid: d6388b49ffa8fd34cb7af55abfb194b9,
+    type: 2}

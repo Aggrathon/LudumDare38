@@ -3374,6 +3374,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51224e062eba45245836a5306b5e8670, type: 2}
   - {fileID: 11400000, guid: 2cee03731dc302b4e8cf027745b071a6, type: 2}
   - {fileID: 11400000, guid: 36f21608df480944ba588b02c4325c39, type: 2}
+  - {fileID: 11400000, guid: f7430f4866304094ca73dd0103d4b7fa, type: 2}
+  - {fileID: 11400000, guid: 591cee94bb4cc6c49a1cdf9af4924bdc, type: 2}
+  - {fileID: 11400000, guid: 29f0b1bd9fa67424199a28cde7afb56a, type: 2}
+  - {fileID: 11400000, guid: 2e1e9f0f31adb3845b3b11ae3976aa10, type: 2}
   battle: {fileID: 0}
 --- !u!114 &114557055294361332
 MonoBehaviour:

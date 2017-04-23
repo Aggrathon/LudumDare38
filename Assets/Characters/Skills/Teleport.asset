@@ -8,16 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7027ca4cd1a98eb4f973a9cd454caeae, type: 3}
-  m_Name: Force Lightning
+  m_Script: {fileID: 11500000, guid: c5d73cf2bcb2cf74ab18739044f41095, type: 3}
+  m_Name: Teleport
   m_EditorClassIdentifier: 
-  description: 'Spray electricity at an enemy.
-
-
-    Range: 2'
+  description: Teleport to any empty tile.
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  range: 2
-  target: 1
-  damage: 5
-  particleEffect: {fileID: 1114652787578300, guid: 882e2d63e76e75747b79ce9b222a850c,
+  range: 100
+  target: 0
+  particleEffect: {fileID: 1356356526661832, guid: 462674bba92ea824e9afb6b8d632552d,
     type: 2}

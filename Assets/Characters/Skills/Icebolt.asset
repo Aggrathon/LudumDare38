@@ -16,3 +16,5 @@ MonoBehaviour:
   range: 100
   target: 1
   damage: 4
+  particleEffect: {fileID: 1356356526661832, guid: 462674bba92ea824e9afb6b8d632552d,
+    type: 2}

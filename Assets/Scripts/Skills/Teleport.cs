@@ -18,7 +18,7 @@ public class Teleport : Skill
 		from.occupant.transform.position = to.occupantPosition;
 		from.occupant = null;
 		if (particleEffect != null)
-			Instantiate(particleEffect, to.occupantPosition, Quaternion.identity);
+			Instantiate(particleEffect, to.occupantPosition +Vector3.up, Quaternion.identity);
 		return 0.5f;
 	}
 }

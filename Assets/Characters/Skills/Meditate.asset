@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b03105f3a607d48b3a7c08b07bc095, type: 3}
   m_Name: Meditate
   m_EditorClassIdentifier: 
-  description: 
+  description: Skip your turn
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   range: 1
   target: 3

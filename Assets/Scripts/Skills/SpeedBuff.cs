@@ -2,21 +2,21 @@
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Data/Skill/Shoot")]
-public class Shoot : Skill
+[CreateAssetMenu(menuName = "Data/Skill/SpeedBuff")]
+public class SpeedBuff : Skill
 {
-	public int damage = 3;
 	public GameObject particleEffect;
+	public float multiplier = 1.5f;
 
-	public Shoot()
+	public SpeedBuff()
 	{
-		range = 100;
-		target = Target.enemy;
+		range = 1;
+		target = Target.friend;
 	}
 
 	public override float Activate(Hex from, Hex to)
 	{
-		to.occupant.ChangeHealth(-damage);
+		to.occupant.stats.speed = (int)((float)to.occupant.stats.speed * multiplier);
 		if (particleEffect != null)
 			Instantiate(particleEffect, to.occupantPosition + Vector3.up, Quaternion.identity);
 		return 0.5f;

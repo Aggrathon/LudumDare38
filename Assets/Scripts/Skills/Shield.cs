@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shield : Skill
 {
 	public int amount;
+	public GameObject particleEffect;
 
 	public Shield()
 	{
@@ -15,6 +16,8 @@ public class Shield : Skill
 	public override float Activate(Hex from, Hex to)
 	{
 		from.occupant.ChangeHealth(amount);
+		if (particleEffect != null)
+			Instantiate(particleEffect, to.occupantPosition + Vector3.up, Quaternion.identity);
 		return 0.5f;
 	}
 }
