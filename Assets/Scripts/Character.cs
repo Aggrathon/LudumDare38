@@ -9,8 +9,21 @@ public class Character
 	public int strength = 2;
 	public int speed = 10;
 
+	public Character()
+	{
+
+	}
+
+	public Character(Character other)
+	{
+		name = other.name;
+		health = other.health;
+		strength = other.strength;
+		speed = other.speed;
+	}
+
 	public Character Copy()
 	{
-		return JsonUtility.FromJson<Character>(JsonUtility.ToJson(this));
+		return new Character(this);
 	}
 }

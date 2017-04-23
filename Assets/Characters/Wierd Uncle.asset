@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155802772ea677848b1993e06bcb78d6, type: 3}
+  m_Name: Wierd Uncle
+  m_EditorClassIdentifier: 
+  hero:
+    name: Wierd Uncle
+    health: 10
+    strength: 2
+    speed: 12
+    prefab: {fileID: 1050643541639498, guid: 1a634dad27a1d6a46a935f1a19c8a30d, type: 2}
+    skills: []
+    startingCards: 3
+    equipment:
+    - {fileID: 11400000, guid: c6a9793227a999f49b9668b6dbaac125, type: 2}
+    - {fileID: 11400000, guid: 6417f19f208fd8547931a7cd5248fad9, type: 2}
+    defaultAttack: {fileID: 11400000, guid: 3e9fa2045ef63a54cb33bf5c1dd513b8, type: 2}

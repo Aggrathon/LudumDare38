@@ -11,7 +11,7 @@ public class TestBattleEditor : Editor
 		if (GUILayout.Button("Run Test Battle"))
 		{
 			if (EditorApplication.isPlaying)
-				FindObjectOfType<BattleController>().Battle((target as TestBattle).players, (target as TestBattle).enemies, target.name, (target as TestBattle).color);
+				(target as TestBattle).Battle(FindObjectOfType<BattleController>());
 			else
 			{
 				EditorApplication.isPlaying = true;

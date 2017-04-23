@@ -7,7 +7,7 @@ public class IntroController : MonoBehaviour {
 
 	public Transform mainCamera;
 	public GameObject[] lookPrefabs;
-	public Hero[] followers;
+	public HeroCharacter[] followers;
 	public Equipment[] equipment;
 	public int goldAmount = 100;
 

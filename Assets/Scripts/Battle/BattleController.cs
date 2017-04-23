@@ -25,12 +25,12 @@ public class BattleController : MonoBehaviour {
 	}
 
 
-	public void Battle(Hero[] players, EnemyCharacter[] enemies, string enemyName)
+	public void Battle(List<Hero> players, EnemyCharacter[] enemies, string enemyName)
 	{
 		Battle(players, enemies, enemyName, Color.gray * 0.5f);
 	}
 
-	public void Battle(Hero[] players, EnemyCharacter[] enemies, string enemyName, Color color)
+	public void Battle(List<Hero> players, EnemyCharacter[] enemies, string enemyName, Color color)
 	{
 		Finish(true);
 		for (int i = 0; i < map.hexes.Count; i++)
@@ -39,7 +39,7 @@ public class BattleController : MonoBehaviour {
 		}
 
 		//Setup Characters
-		for (int i = 0; i < players.Length; i++)
+		for (int i = 0; i < players.Count; i++)
 		{
 			var bc = Instantiate(players[i].prefab, map.playerStartingLocations[i].occupantPosition, Quaternion.identity).GetComponent<PlayerCharacter>();
 			bc.SetCharacter(players[i]);
