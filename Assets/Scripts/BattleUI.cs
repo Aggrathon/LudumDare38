@@ -23,7 +23,6 @@ public class BattleUI : MonoBehaviour
 	List<Hex> buffer;
 	PlayerCharacter character;
 	Skill skill;
-	int counter = 3;
 
 	private void OnEnable()
 	{
@@ -78,40 +77,41 @@ public class BattleUI : MonoBehaviour
 	public void SetupPlayer(PlayerCharacter pc)
 	{
 		character = pc;
-		while (pc.skills.Count > cardList.childCount)
+		while (pc.skills.Count +3 > cardList.childCount)
 		{
 			Instantiate(cardList.GetChild(0), cardList, false);
 		}
-		for (int i = 0; i < pc.skills.Count; i++)
+		SetSkillCard(meditate, 0, true);
+		SetSkillCard(move, 1, true);
+		SetSkillCard(pc.defaultSkill, 2, true);
+		for (int i = 3; i < pc.skills.Count+3; i++)
 		{
-			Transform tr = cardList.GetChild(i);
-			Skill sk = pc.skills[i];
-			Button b = tr.GetComponent<Button>();
-			tr.GetChild(0).GetComponent<Text>().text = sk.name;
-			tr.GetChild(1).GetComponent<Image>().sprite = sk.icon;
-			tr.GetChild(2).GetComponent<Text>().text = sk.description;
-			b.interactable = true;
-			b.onClick.RemoveAllListeners();
-			b.onClick.AddListener(() => { SelectTarget(sk, b); });
-			tr.gameObject.SetActive(true);
+			SetSkillCard(pc.skills[i - 3], i);
 		}
-		for (int i = pc.skills.Count; i < cardList.childCount; i++)
+		for (int i = pc.skills.Count+3; i < cardList.childCount; i++)
 		{
 			cardList.GetChild(i).gameObject.SetActive(false);
 		}
-		if (counter > 0)
-		{
-			counter--;
-			View();
-		}
-		else
-			SelectAction();
+		SelectAction();
+	}
+
+	void SetSkillCard(Skill sk, int i, bool permanent=false)
+	{
+		Transform tr = cardList.GetChild(i);
+		Button b = tr.GetComponent<Button>();
+		tr.GetChild(0).GetComponent<Text>().text = sk.name;
+		tr.GetChild(1).GetComponent<Image>().sprite = sk.icon;
+		tr.GetChild(2).GetComponent<Text>().text = permanent ? sk.description + "\n<color=#555><i>(Permanent)</i></color>" : sk.description;
+		b.interactable = true;
+		b.onClick.RemoveAllListeners();
+		b.onClick.AddListener(() => { SelectTarget(sk, b); });
+		tr.gameObject.SetActive(true);
 	}
 
 	void View()
 	{
 		state = State.view;
-		actionButtonText.text = "Play";
+		actionButtonText.text = "Play Card";
 		actionPanel.SetActive(false);
 		Unselect();
 	}
@@ -119,7 +119,7 @@ public class BattleUI : MonoBehaviour
 	void SelectAction()
 	{
 		state = State.action;
-		actionButtonText.text = "View";
+		actionButtonText.text = "Hide Panel";
 		actionPanel.SetActive(true);
 		Unselect();
 	}
@@ -135,7 +135,7 @@ public class BattleUI : MonoBehaviour
 		if(character.SkillTargets(ref buffer, skill))
 		{
 			state = State.target;
-			actionButtonText.text = "Cancel";
+			actionButtonText.text = "Cancel Card";
 			actionPanel.SetActive(false);
 			for (int i = 0; i < buffer.Count; i++)
 			{
@@ -177,15 +177,5 @@ public class BattleUI : MonoBehaviour
 		actionPanel.SetActive(false);
 		character = null;
 		Unselect();
-	}
-
-	public void Meditate()
-	{
-		SelectTarget(meditate, null);
-	}
-
-	public void Move()
-	{
-		SelectTarget(move, null);
 	}
 }

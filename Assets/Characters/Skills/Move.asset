@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78dcb95cc4be40647989f9b043472fa6, type: 3}
   m_Name: Move
   m_EditorClassIdentifier: 
-  description: 
+  description: Move one tile
   icon: {fileID: 0}
   range: 1
   target: 0
-  particleEffect: {fileID: 0}

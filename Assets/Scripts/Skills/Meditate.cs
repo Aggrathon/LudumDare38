@@ -14,6 +14,7 @@ public class Meditate : Skill
 	public override float Activate(Hex from, Hex to)
 	{
 		(from.occupant as PlayerCharacter).DrawCard();
+		from.occupant.ChangeHealth(1);
 		return 0.1f;
 	}
 }

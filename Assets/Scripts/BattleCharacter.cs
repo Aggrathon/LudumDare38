@@ -10,7 +10,6 @@ public abstract class BattleCharacter : MonoBehaviour
 
 	public GameObject deathFX;
 	public Text healthText;
-	public Text healthDelta;
 
 	[NonSerialized]
 	public int team;
@@ -26,20 +25,20 @@ public abstract class BattleCharacter : MonoBehaviour
 
 	private void Start()
 	{
-		healthDelta.text = "";
-		healthText.text = stats.health.ToString();
+		if (stats != null)
+			healthText.text = stats.health.ToString();
+		else
+			healthText.text = "??";
 	}
 
 	public void ChangeHealth(int amount)
 	{
 		if (amount > 0)
-			healthDelta.text = "<color=green>+" + amount + "</color>";
+			healthText.text = string.Format("<size=88><b><color=green>+{0}</color></b></size>", amount);
 		else
-			healthDelta.text = "<color=red>" + amount + "</color>";
-		healthDelta.enabled = true;
-		StartCoroutine(Utility.RunLater(1f, () => healthDelta.text = ""));
+			healthText.text = string.Format("<size=88><b><color=red>{0}</color></b></size>", amount);
+		StartCoroutine(Utility.RunLater(2f, () => healthText.text = stats.health.ToString()));
 		stats.health += amount;
-		healthText.text = stats.health.ToString();
 		if (stats.health <= 0)
 			OnDeath();
 	}

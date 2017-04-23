@@ -34,10 +34,6 @@ public class PlayerCharacter : BattleCharacter
 			skills.Add(skillPool[skillPool.Count - 1]);
 			skillPool.RemoveAt(skillPool.Count - 1);
 		}
-		else
-		{
-			skills.Add(defaultSkill);
-		}
 	}
 
 	public bool SkillTargets(ref List<Hex> list, Skill skill)
