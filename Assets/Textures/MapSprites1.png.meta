@@ -1,0 +1,638 @@
+fileFormatVersion: 2
+guid: ef658322c49a4b74b908fd3988db1dc1
+timeCreated: 1492936927
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MapSprites1_0
+    21300002: MapSprites1_1
+    21300004: MapSprites1_2
+    21300006: MapSprites1_3
+    21300008: MapSprites1_4
+    21300010: MapSprites1_5
+    21300012: MapSprites1_6
+    21300014: MapSprites1_7
+    21300016: MapSprites1_8
+    21300018: MapSprites1_9
+    21300020: MapSprites1_10
+    21300022: MapSprites1_11
+    21300024: MapSprites1_12
+    21300026: MapSprites1_13
+    21300028: MapSprites1_14
+    21300030: MapSprites1_15
+    21300032: MapSprites1_17
+    21300034: MapSprites1_18
+    21300036: MapSprites1_19
+    21300038: MapSprites1_23
+    21300040: MapSprites1_24
+    21300042: MapSprites1_25
+    21300044: MapSprites1_28
+    21300046: MapSprites1_29
+    21300048: MapSprites1_30
+    21300050: MapSprites1_31
+    21300052: MapSprites1_32
+    21300054: MapSprites1_33
+    21300056: MapSprites1_34
+    21300058: MapSprites1_35
+    21300060: MapSprites1_36
+    21300062: MapSprites1_37
+    21300064: MapSprites1_38
+    21300066: MapSprites1_39
+    21300068: MapSprites1_40
+    21300070: MapSprites1_16
+    21300072: MapSprites1_20
+    21300074: MapSprites1_21
+    21300076: MapSprites1_22
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MapSprites1_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 798
+        width: 150
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 796
+        width: 224
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 804
+        width: 264
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 808
+        width: 230
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 668
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 652
+        width: 100
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_6
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 635
+        width: 200
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_7
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 621
+        width: 152
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_9
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 568
+        width: 161
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 524
+        width: 210
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_12
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 416
+        width: 94
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_13
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 441
+        width: 243
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 360
+        width: 202
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_15
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 315
+        width: 96
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_17
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 332
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_18
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 405
+        width: 105
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_19
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 340
+        width: 74
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_23
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 325
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_24
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 332
+        width: 60
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_25
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 276
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 248
+        width: 154
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_29
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 167
+        width: 306
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_30
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 188
+        width: 49
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_31
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 48
+        width: 104
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_32
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 130
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 138
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_34
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 140
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_35
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 59
+        width: 140
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_36
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 48
+        width: 179
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_37
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 91
+        width: 96
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_38
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 28
+        width: 101
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_39
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 39
+        width: 156
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_40
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 36
+        width: 78
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 715
+        width: 93
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 796
+        width: 62
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 903
+        width: 65
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 907
+        width: 66
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 908
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MapSprites1_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 149
+        width: 193
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
