@@ -1,7 +1,10 @@
 # An Adventurer's Exodus
-Ludum Dare entry [here](https://ldjam.com/events/ludum-dare/38/an-adventurers-exodus/)
-Play the web version [here](https://aggrathon.github.io/LudumDare38/)
-Download executables [here](https://github.com/Aggrathon/LudumDare38/releases)
+A turnbased tactics RPG with hextiles made from scratch in 48 hours.
+
+## Links
+Ludum Dare entry [here](https://ldjam.com/events/ludum-dare/38/an-adventurers-exodus/)  
+Play the web version [here](https://aggrathon.github.io/LudumDare38/)  
+Download executables [here](https://github.com/Aggrathon/LudumDare38/releases)  
 
 ## Screenshots
 ![Screenshot 1](https://raw.githubusercontent.com/Aggrathon/LudumDare38/gh-pages/Screenshot1.png)
