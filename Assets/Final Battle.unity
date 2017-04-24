@@ -383,11 +383,17 @@ Prefab:
     - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
         type: 2}
       propertyPath: mapSize
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1585f7b8c29606242964f2475e06acab, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &385859553 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114311560329780844, guid: 1585f7b8c29606242964f2475e06acab,
+    type: 2}
+  m_PrefabInternal: {fileID: 385859552}
+  m_Script: {fileID: 11500000, guid: deb3db2288a2d4a4da409e10b4c0df38, type: 3}
 --- !u!1 &403491907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3551a68d23cf8c240977abefc45e00c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bc: {fileID: 0}
+  bc: {fileID: 385859553}
 --- !u!114 &1645203969
 MonoBehaviour:
   m_ObjectHideFlags: 0
