@@ -168,8 +168,6 @@ public class BattleController : MonoBehaviour {
 				}
 				if (callback != null)
 					callback();
-				else
-					Debug.Log("No Callback");
 				lastWinningTeam = BattleCharacter.PLAYER_TEAM;
 				Finish();
 			}

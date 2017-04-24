@@ -338,6 +338,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4376251970177090, guid: 1585f7b8c29606242964f2475e06acab, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -383,7 +398,487 @@ Prefab:
     - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
         type: 2}
       propertyPath: mapSize
-      value: 9
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[11]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: playerStartingLocations.Array.data[12]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[11]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: enemyStartingLocations.Array.data[12]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[11]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[12]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[13]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[14]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[15]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[16]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[17]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[18]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[19]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[20]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[21]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[22]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[23]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[24]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[25]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[26]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[27]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[28]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[29]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[30]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[31]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[32]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[33]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[34]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[35]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[36]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[37]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[38]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[39]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[40]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[41]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[42]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[43]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[44]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[45]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[46]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[47]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[48]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[49]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[50]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[51]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[52]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[53]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[54]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[55]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[56]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[57]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[58]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[59]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[60]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[61]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[62]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[63]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[64]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[65]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[66]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[67]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[68]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173765029879104, guid: 1585f7b8c29606242964f2475e06acab,
+        type: 2}
+      propertyPath: hexes.Array.data[69]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1585f7b8c29606242964f2475e06acab, type: 2}
@@ -1080,7 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77ce6053c93a424fb4c88f1ce22ce81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  group: {fileID: 11400000, guid: 32787e1fd3ec6564fa41e7a8fc3ed2cc, type: 2}
+  group: {fileID: 11400000, guid: e63c3501e9af32f4f9398b2ad669841a, type: 2}
   battle: {fileID: 11400000, guid: 797a792041827e644a70ea2d6968460f, type: 2}
 --- !u!4 &750113046
 Transform:
