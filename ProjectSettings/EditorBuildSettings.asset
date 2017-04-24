@@ -18,5 +18,5 @@ EditorBuildSettings:
     path: Assets/Town2.unity
     guid: ac9175ee10503fe4ba92f00d9a78c371
   - enabled: 1
-    path: Assets/Battle.unity
+    path: Assets/Final Battle.unity
     guid: 956290e1f7959d14fa1965c820007ea8
