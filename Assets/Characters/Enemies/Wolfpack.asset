@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302c6d300f4aab8448adfe85cc7d723a, type: 3}
-  m_Name: Volfpack
+  m_Name: Wolfpack
   m_EditorClassIdentifier: 
   goundColor: {r: 0.07450303, g: 0.25, b: 0.044499993, a: 1}
   enemies:

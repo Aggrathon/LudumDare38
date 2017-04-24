@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf9ce65840b8ac4aa3428c7fa757872, type: 3}
-  m_Name: First Aid Kit
+  m_Name: Crossbow
   m_EditorClassIdentifier: 
-  description: Quick healing
+  description: A crossbow with limited ammunition
   value: 120
   healthDelta: 0
   strengthDelta: 0
   speedDelta: 0
   skills:
-  - {fileID: 11400000, guid: 51224e062eba45245836a5306b5e8670, type: 2}
-  - {fileID: 11400000, guid: 51224e062eba45245836a5306b5e8670, type: 2}
-  - {fileID: 11400000, guid: 51224e062eba45245836a5306b5e8670, type: 2}
+  - {fileID: 11400000, guid: 370b025f5e9945642bad0d2e7bb00535, type: 2}
+  - {fileID: 11400000, guid: 370b025f5e9945642bad0d2e7bb00535, type: 2}
+  - {fileID: 11400000, guid: 370b025f5e9945642bad0d2e7bb00535, type: 2}
   defaultSkill: {fileID: 0}
-  canHasTwo: 1
+  canHasTwo: 0

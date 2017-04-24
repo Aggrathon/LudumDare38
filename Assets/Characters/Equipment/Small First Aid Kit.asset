@@ -19,3 +19,4 @@ MonoBehaviour:
   skills:
   - {fileID: 11400000, guid: 51224e062eba45245836a5306b5e8670, type: 2}
   defaultSkill: {fileID: 0}
+  canHasTwo: 1

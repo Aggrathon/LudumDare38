@@ -21,10 +21,13 @@ public class BattleController : MonoBehaviour {
 	private int speedModifier;
 	private Action callback;
 
+	public int lastWinningTeam { get; protected set; }
+
 	private void Awake()
 	{
 		characters = new List<BattleCharacter>();
 		turnOrder = new List<KeyValuePair<int, BattleCharacter>>();
+		lastWinningTeam = -1;
 	}
 
 
@@ -167,6 +170,7 @@ public class BattleController : MonoBehaviour {
 					callback();
 				else
 					Debug.Log("No Callback");
+				lastWinningTeam = BattleCharacter.PLAYER_TEAM;
 				Finish();
 			}
 			else if (bc.team == BattleCharacter.PLAYER_TEAM)
@@ -176,6 +180,7 @@ public class BattleController : MonoBehaviour {
 					if (characters[i].team == BattleCharacter.PLAYER_TEAM)
 						return;
 				}
+				lastWinningTeam = BattleCharacter.ENEMY_TEAM;
 				EventLog.Log("You lost the battle!");
 				AudioManager.PlayAt(failSound, camera.transform.position);
 				Finish();

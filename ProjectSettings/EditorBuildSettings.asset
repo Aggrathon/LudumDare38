@@ -12,5 +12,11 @@ EditorBuildSettings:
     path: Assets/Town1.unity
     guid: afad442dbe8144748851f4dd42d7fe54
   - enabled: 1
+    path: Assets/Intermission.unity
+    guid: 3fce57bf726057340a6a550dd63c186a
+  - enabled: 1
+    path: Assets/Town2.unity
+    guid: ac9175ee10503fe4ba92f00d9a78c371
+  - enabled: 1
     path: Assets/Battle.unity
     guid: 956290e1f7959d14fa1965c820007ea8

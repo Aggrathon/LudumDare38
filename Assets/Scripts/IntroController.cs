@@ -11,10 +11,12 @@ public class IntroController : MonoBehaviour {
 	public HeroCharacter[] followers;
 	public Equipment[] equipment;
 	public int goldAmount = 100;
+	public bool reset = true;
 
 	private void Start()
 	{
-		GameData.Reset();
+		if(reset)
+			GameData.Reset();
 	}
 
 	public void NextScreen(Transform screen)
@@ -61,7 +63,7 @@ public class IntroController : MonoBehaviour {
 
 	public void NextLevel()
 	{
-		GameData.instance.currentScene = 1;
+		GameData.instance.currentScene++;
 		SceneManager.LoadScene(GameData.instance.currentScene);
 	}
 }
