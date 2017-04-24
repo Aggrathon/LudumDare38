@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour {
 	public float battleAngle = -35f;
 
 
-	float normHeight;
+	float normHeight = 1;
 	float maxRange = 20f;
 
 	private void Start()
